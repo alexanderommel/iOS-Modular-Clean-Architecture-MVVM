@@ -10,3 +10,4 @@
 **/*.ipa
 **/*.pbxuser
 
+/dandelion/app.xcodeproj/xcuserdata
