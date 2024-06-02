@@ -1,9 +1,8 @@
 .DS_Store
 **/.DS_Store
-**/UserInterfaceState.xcuserstate
+# UserData
+**/xcuserdata/*
 **/*.xcuserstate
-xcuserdata/
-**/xcuserdata/
 */build/*
 **/build/*
 # Build
