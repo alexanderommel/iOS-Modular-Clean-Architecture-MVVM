@@ -5,3 +5,8 @@ xcuserdata/
 **/xcuserdata/
 */build/*
 **/build/*
+# Build
+**/.build/
+**/Build/
+**/*.ipa
+**/*.pbxuser
