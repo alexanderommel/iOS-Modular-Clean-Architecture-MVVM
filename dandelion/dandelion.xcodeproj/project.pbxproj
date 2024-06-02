@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1147CF932C0D158200B4F3D9 /* stores_ui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147CF922C0D158200B4F3D9 /* stores_ui.framework */; };
+		1147CF942C0D158200B4F3D9 /* stores_ui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1147CF922C0D158200B4F3D9 /* stores_ui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11490B352C0CEDC100888A39 /* dandelionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11490B342C0CEDC100888A39 /* dandelionApp.swift */; };
 		11490B372C0CEDC100888A39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11490B362C0CEDC100888A39 /* ContentView.swift */; };
 		11490B392C0CEDC200888A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11490B382C0CEDC200888A39 /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 				11490BD32C0CF2EA00888A39 /* core_ios.framework in Embed Frameworks */,
 				11490BE32C0CF30A00888A39 /* checkout.framework in Embed Frameworks */,
 				11490BE02C0CF30600888A39 /* stores.framework in Embed Frameworks */,
+				1147CF942C0D158200B4F3D9 /* stores_ui.framework in Embed Frameworks */,
 				11490BD72C0CF2EF00888A39 /* common.framework in Embed Frameworks */,
 				11490BDA2C0CF2F400888A39 /* persistence.framework in Embed Frameworks */,
 				11490BE62C0CF31100888A39 /* user.framework in Embed Frameworks */,
@@ -48,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1147CF922C0D158200B4F3D9 /* stores_ui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores_ui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B312C0CEDC100888A39 /* dandelion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dandelion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B342C0CEDC100888A39 /* dandelionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dandelionApp.swift; sourceTree = "<group>"; };
 		11490B362C0CEDC100888A39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				11490BD22C0CF2EA00888A39 /* core_ios.framework in Frameworks */,
 				11490BE22C0CF30A00888A39 /* checkout.framework in Frameworks */,
 				11490BDF2C0CF30600888A39 /* stores.framework in Frameworks */,
+				1147CF932C0D158200B4F3D9 /* stores_ui.framework in Frameworks */,
 				11490BD62C0CF2EF00888A39 /* common.framework in Frameworks */,
 				11490BD92C0CF2F400888A39 /* persistence.framework in Frameworks */,
 				11490BE52C0CF31100888A39 /* user.framework in Frameworks */,
@@ -119,6 +124,7 @@
 		11490BD02C0CF2EA00888A39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1147CF922C0D158200B4F3D9 /* stores_ui.framework */,
 				11490BE42C0CF31100888A39 /* user.framework */,
 				11490BE12C0CF30A00888A39 /* checkout.framework */,
 				11490BDE2C0CF30600888A39 /* stores.framework */,
