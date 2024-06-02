@@ -7,22 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11490B352C0CEDC100888A39 /* dandelionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11490B342C0CEDC100888A39 /* dandelionApp.swift */; };
-		11490B372C0CEDC100888A39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11490B362C0CEDC100888A39 /* ContentView.swift */; };
-		11490B392C0CEDC200888A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11490B382C0CEDC200888A39 /* Assets.xcassets */; };
-		11490B3C2C0CEDC200888A39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11490B3B2C0CEDC200888A39 /* Preview Assets.xcassets */; };
+		11490B8E2C0CF0A700888A39 /* core_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490B8D2C0CF0A700888A39 /* core_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11490B312C0CEDC100888A39 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		11490B342C0CEDC100888A39 /* dandelionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dandelionApp.swift; sourceTree = "<group>"; };
-		11490B362C0CEDC100888A39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		11490B382C0CEDC200888A39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		11490B3B2C0CEDC200888A39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11490B8A2C0CF0A700888A39 /* core_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = core_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11490B8D2C0CF0A700888A39 /* core_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core_ios.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		11490B2E2C0CEDC100888A39 /* Frameworks */ = {
+		11490B872C0CF0A700888A39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,77 +26,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11490B282C0CEDC100888A39 = {
+		11490B802C0CF0A700888A39 = {
 			isa = PBXGroup;
 			children = (
-				11490B332C0CEDC100888A39 /* dandelion */,
-				11490B322C0CEDC100888A39 /* Products */,
+				11490B8C2C0CF0A700888A39 /* core-ios */,
+				11490B8B2C0CF0A700888A39 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		11490B322C0CEDC100888A39 /* Products */ = {
+		11490B8B2C0CF0A700888A39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11490B312C0CEDC100888A39 /* app.app */,
+				11490B8A2C0CF0A700888A39 /* core_ios.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		11490B332C0CEDC100888A39 /* dandelion */ = {
+		11490B8C2C0CF0A700888A39 /* core-ios */ = {
 			isa = PBXGroup;
 			children = (
-				11490B342C0CEDC100888A39 /* dandelionApp.swift */,
-				11490B362C0CEDC100888A39 /* ContentView.swift */,
-				11490B382C0CEDC200888A39 /* Assets.xcassets */,
-				11490B3A2C0CEDC200888A39 /* Preview Content */,
+				11490B8D2C0CF0A700888A39 /* core_ios.h */,
 			);
-			path = dandelion;
-			sourceTree = "<group>";
-		};
-		11490B3A2C0CEDC200888A39 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				11490B3B2C0CEDC200888A39 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = "core-ios";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		11490B852C0CF0A700888A39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11490B8E2C0CF0A700888A39 /* core_ios.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		11490B302C0CEDC100888A39 /* app */ = {
+		11490B892C0CF0A700888A39 /* core-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11490B3F2C0CEDC200888A39 /* Build configuration list for PBXNativeTarget "app" */;
+			buildConfigurationList = 11490B912C0CF0A700888A39 /* Build configuration list for PBXNativeTarget "core-ios" */;
 			buildPhases = (
-				11490B2D2C0CEDC100888A39 /* Sources */,
-				11490B2E2C0CEDC100888A39 /* Frameworks */,
-				11490B2F2C0CEDC100888A39 /* Resources */,
+				11490B852C0CF0A700888A39 /* Headers */,
+				11490B862C0CF0A700888A39 /* Sources */,
+				11490B872C0CF0A700888A39 /* Frameworks */,
+				11490B882C0CF0A700888A39 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = app;
-			productName = dandelion;
-			productReference = 11490B312C0CEDC100888A39 /* app.app */;
-			productType = "com.apple.product-type.application";
+			name = "core-ios";
+			productName = "core-ios";
+			productReference = 11490B8A2C0CF0A700888A39 /* core_ios.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		11490B292C0CEDC100888A39 /* Project object */ = {
+		11490B812C0CF0A700888A39 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					11490B302C0CEDC100888A39 = {
+					11490B892C0CF0A700888A39 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = 11490B2C2C0CEDC100888A39 /* Build configuration list for PBXProject "app" */;
+			buildConfigurationList = 11490B842C0CF0A700888A39 /* Build configuration list for PBXProject "core-ios" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +104,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 11490B282C0CEDC100888A39;
-			productRefGroup = 11490B322C0CEDC100888A39 /* Products */;
+			mainGroup = 11490B802C0CF0A700888A39;
+			productRefGroup = 11490B8B2C0CF0A700888A39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11490B302C0CEDC100888A39 /* app */,
+				11490B892C0CF0A700888A39 /* core-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11490B2F2C0CEDC100888A39 /* Resources */ = {
+		11490B882C0CF0A700888A39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11490B3C2C0CEDC200888A39 /* Preview Assets.xcassets in Resources */,
-				11490B392C0CEDC200888A39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		11490B2D2C0CEDC100888A39 /* Sources */ = {
+		11490B862C0CF0A700888A39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11490B372C0CEDC100888A39 /* ContentView.swift in Sources */,
-				11490B352C0CEDC100888A39 /* dandelionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		11490B3D2C0CEDC200888A39 /* Debug */ = {
+		11490B8F2C0CF0A700888A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -179,6 +169,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -205,10 +196,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		11490B3E2C0CEDC200888A39 /* Release */ = {
+		11490B902C0CF0A700888A39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,6 +235,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -261,60 +255,70 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		11490B402C0CEDC200888A39 /* Debug */ = {
+		11490B922C0CF0A700888A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"dandelion/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alexanderommelsw.dandelion;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "alexanderommelsw.core-ios";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		11490B412C0CEDC200888A39 /* Release */ = {
+		11490B932C0CF0A700888A39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"dandelion/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alexanderommelsw.dandelion;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "alexanderommelsw.core-ios";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,25 +327,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11490B2C2C0CEDC100888A39 /* Build configuration list for PBXProject "app" */ = {
+		11490B842C0CF0A700888A39 /* Build configuration list for PBXProject "core-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11490B3D2C0CEDC200888A39 /* Debug */,
-				11490B3E2C0CEDC200888A39 /* Release */,
+				11490B8F2C0CF0A700888A39 /* Debug */,
+				11490B902C0CF0A700888A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11490B3F2C0CEDC200888A39 /* Build configuration list for PBXNativeTarget "app" */ = {
+		11490B912C0CF0A700888A39 /* Build configuration list for PBXNativeTarget "core-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11490B402C0CEDC200888A39 /* Debug */,
-				11490B412C0CEDC200888A39 /* Release */,
+				11490B922C0CF0A700888A39 /* Debug */,
+				11490B932C0CF0A700888A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 11490B292C0CEDC100888A39 /* Project object */;
+	rootObject = 11490B812C0CF0A700888A39 /* Project object */;
 }

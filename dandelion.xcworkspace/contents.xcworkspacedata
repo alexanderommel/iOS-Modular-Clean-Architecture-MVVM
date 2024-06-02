@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:dandelion/dandelion.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:features/user/user.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:features/checkout/checkout.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:features/stores/stores.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:common/common.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:core-ios/core-ios.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:networking/networking.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:persistence/persistence.xcodeproj">
+   </FileRef>
+</Workspace>
