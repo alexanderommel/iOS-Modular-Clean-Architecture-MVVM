@@ -1,5 +1,6 @@
 .DS_Store
 **/.DS_Store
+**/UserInterfaceState.xcuserstate
 **/*.xcuserstate
 xcuserdata/
 **/xcuserdata/
@@ -10,3 +11,4 @@ xcuserdata/
 **/Build/
 **/*.ipa
 **/*.pbxuser
+
