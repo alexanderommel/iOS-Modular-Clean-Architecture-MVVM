@@ -8,11 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		11490B642C0CF04F00888A39 /* networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490B632C0CF04F00888A39 /* networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		118941CE2C0D2213005DA10E /* stores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941CD2C0D2213005DA10E /* stores.framework */; };
+		118941CF2C0D2213005DA10E /* stores.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118941CD2C0D2213005DA10E /* stores.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		118941D22C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941D12C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		118941D02C0D2213005DA10E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				118941CF2C0D2213005DA10E /* stores.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11490B602C0CF04F00888A39 /* networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B632C0CF04F00888A39 /* networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = networking.h; sourceTree = "<group>"; };
+		118941CD2C0D2213005DA10E /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		118941D12C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRemoteRepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118941CE2C0D2213005DA10E /* stores.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +51,7 @@
 			children = (
 				11490B622C0CF04F00888A39 /* networking */,
 				11490B612C0CF04F00888A39 /* Products */,
+				118941CC2C0D2213005DA10E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +66,26 @@
 		11490B622C0CF04F00888A39 /* networking */ = {
 			isa = PBXGroup;
 			children = (
+				118941CB2C0D21EF005DA10E /* stores */,
 				11490B632C0CF04F00888A39 /* networking.h */,
 			);
 			path = networking;
+			sourceTree = "<group>";
+		};
+		118941CB2C0D21EF005DA10E /* stores */ = {
+			isa = PBXGroup;
+			children = (
+				118941D12C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift */,
+			);
+			path = stores;
+			sourceTree = "<group>";
+		};
+		118941CC2C0D2213005DA10E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				118941CD2C0D2213005DA10E /* stores.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +110,7 @@
 				11490B5C2C0CF04F00888A39 /* Sources */,
 				11490B5D2C0CF04F00888A39 /* Frameworks */,
 				11490B5E2C0CF04F00888A39 /* Resources */,
+				118941D02C0D2213005DA10E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +132,7 @@
 				TargetAttributes = {
 					11490B5F2C0CF04F00888A39 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -129,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118941D22C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +301,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -290,6 +332,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +343,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

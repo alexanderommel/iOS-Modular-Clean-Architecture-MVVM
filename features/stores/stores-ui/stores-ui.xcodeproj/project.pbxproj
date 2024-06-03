@@ -8,11 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		1147CF8C2C0D155400B4F3D9 /* stores_ui.h in Headers */ = {isa = PBXBuildFile; fileRef = 1147CF8B2C0D155400B4F3D9 /* stores_ui.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		118941C02C0D1F84005DA10E /* stores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941BF2C0D1F84005DA10E /* stores.framework */; };
+		118941C12C0D1F84005DA10E /* stores.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118941BF2C0D1F84005DA10E /* stores.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		118941C72C0D201B005DA10E /* StoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941C62C0D201B005DA10E /* StoresScreen.swift */; };
+		118941C92C0D205A005DA10E /* StoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941C82C0D205A005DA10E /* StoresViewModel.swift */; };
+		118941D42C0D435E005DA10E /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941D32C0D435E005DA10E /* common.framework */; };
+		118941D52C0D435E005DA10E /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118941D32C0D435E005DA10E /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		118941DE2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941DD2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		118941C22C0D1F84005DA10E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				118941C12C0D1F84005DA10E /* stores.framework in Embed Frameworks */,
+				118941D52C0D435E005DA10E /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1147CF882C0D155400B4F3D9 /* stores_ui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = stores_ui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1147CF8B2C0D155400B4F3D9 /* stores_ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stores_ui.h; sourceTree = "<group>"; };
+		118941BF2C0D1F84005DA10E /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		118941C62C0D201B005DA10E /* StoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresScreen.swift; sourceTree = "<group>"; };
+		118941C82C0D205A005DA10E /* StoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewModel.swift; sourceTree = "<group>"; };
+		118941D32C0D435E005DA10E /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		118941D62C0D4940005DA10E /* networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		118941DD2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRemoteRepositoryMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118941C02C0D1F84005DA10E /* stores.framework in Frameworks */,
+				118941D42C0D435E005DA10E /* common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +61,7 @@
 			children = (
 				1147CF8A2C0D155400B4F3D9 /* stores-ui */,
 				1147CF892C0D155400B4F3D9 /* Products */,
+				118941BE2C0D1F84005DA10E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +76,54 @@
 		1147CF8A2C0D155400B4F3D9 /* stores-ui */ = {
 			isa = PBXGroup;
 			children = (
+				118941DC2C0D5056005DA10E /* utils */,
+				118941C52C0D1FE7005DA10E /* viewmodel */,
+				118941C42C0D1FE1005DA10E /* views */,
+				118941C32C0D1FD8005DA10E /* screens */,
 				1147CF8B2C0D155400B4F3D9 /* stores_ui.h */,
 			);
 			path = "stores-ui";
+			sourceTree = "<group>";
+		};
+		118941BE2C0D1F84005DA10E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				118941D62C0D4940005DA10E /* networking.framework */,
+				118941D32C0D435E005DA10E /* common.framework */,
+				118941BF2C0D1F84005DA10E /* stores.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		118941C32C0D1FD8005DA10E /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				118941C62C0D201B005DA10E /* StoresScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		118941C42C0D1FE1005DA10E /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		118941C52C0D1FE7005DA10E /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				118941C82C0D205A005DA10E /* StoresViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		118941DC2C0D5056005DA10E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				118941DD2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +148,7 @@
 				1147CF842C0D155400B4F3D9 /* Sources */,
 				1147CF852C0D155400B4F3D9 /* Frameworks */,
 				1147CF862C0D155400B4F3D9 /* Resources */,
+				118941C22C0D1F84005DA10E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +170,7 @@
 				TargetAttributes = {
 					1147CF872C0D155400B4F3D9 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -129,6 +207,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118941DE2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift in Sources */,
+				118941C92C0D205A005DA10E /* StoresViewModel.swift in Sources */,
+				118941C72C0D201B005DA10E /* StoresScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -287,6 +369,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

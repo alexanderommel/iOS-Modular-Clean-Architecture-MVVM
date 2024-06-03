@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import stores
+import stores_ui
+import networking
 
 struct ContentView: View {
     var body: some View {
@@ -22,4 +25,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(StoresViewModel(repository: StoreRemoteRepositoryImpl()))
 }
