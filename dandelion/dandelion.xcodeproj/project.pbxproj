@@ -27,6 +27,8 @@
 		11490BE32C0CF30A00888A39 /* checkout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11490BE12C0CF30A00888A39 /* checkout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11490BE52C0CF31100888A39 /* user.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11490BE42C0CF31100888A39 /* user.framework */; };
 		11490BE62C0CF31100888A39 /* user.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11490BE42C0CF31100888A39 /* user.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		118942D22C0DA36F005DA10E /* ui_dandelion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D12C0DA36F005DA10E /* ui_dandelion.framework */; };
+		118942D32C0DA36F005DA10E /* ui_dandelion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D12C0DA36F005DA10E /* ui_dandelion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +44,7 @@
 				11490BE02C0CF30600888A39 /* stores.framework in Embed Frameworks */,
 				1147CF942C0D158200B4F3D9 /* stores_ui.framework in Embed Frameworks */,
 				11490BD72C0CF2EF00888A39 /* common.framework in Embed Frameworks */,
+				118942D32C0DA36F005DA10E /* ui_dandelion.framework in Embed Frameworks */,
 				11490BDA2C0CF2F400888A39 /* persistence.framework in Embed Frameworks */,
 				11490BE62C0CF31100888A39 /* user.framework in Embed Frameworks */,
 			);
@@ -64,6 +67,7 @@
 		11490BDE2C0CF30600888A39 /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BE12C0CF30A00888A39 /* checkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = checkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BE42C0CF31100888A39 /* user.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = user.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		118942D12C0DA36F005DA10E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 				11490BDF2C0CF30600888A39 /* stores.framework in Frameworks */,
 				1147CF932C0D158200B4F3D9 /* stores_ui.framework in Frameworks */,
 				11490BD62C0CF2EF00888A39 /* common.framework in Frameworks */,
+				118942D22C0DA36F005DA10E /* ui_dandelion.framework in Frameworks */,
 				11490BD92C0CF2F400888A39 /* persistence.framework in Frameworks */,
 				11490BE52C0CF31100888A39 /* user.framework in Frameworks */,
 			);
@@ -124,6 +129,7 @@
 		11490BD02C0CF2EA00888A39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				118942D12C0DA36F005DA10E /* ui_dandelion.framework */,
 				1147CF922C0D158200B4F3D9 /* stores_ui.framework */,
 				11490BE42C0CF31100888A39 /* user.framework */,
 				11490BE12C0CF30A00888A39 /* checkout.framework */,
