@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		110E91F42C0EBB81003BF219 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E91F32C0EBB81003BF219 /* StoreView.swift */; };
 		110E91F62C0EBBEE003BF219 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E91F52C0EBBEE003BF219 /* PreviewData.swift */; };
+		110E91F82C0EBD6C003BF219 /* StoreCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E91F72C0EBD6C003BF219 /* StoreCategoryView.swift */; };
 		1147CF8C2C0D155400B4F3D9 /* stores_ui.h in Headers */ = {isa = PBXBuildFile; fileRef = 1147CF8B2C0D155400B4F3D9 /* stores_ui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		118941C02C0D1F84005DA10E /* stores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941BF2C0D1F84005DA10E /* stores.framework */; };
 		118941C12C0D1F84005DA10E /* stores.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118941BF2C0D1F84005DA10E /* stores.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		110E91F32C0EBB81003BF219 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		110E91F52C0EBBEE003BF219 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		110E91F72C0EBD6C003BF219 /* StoreCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCategoryView.swift; sourceTree = "<group>"; };
 		1147CF882C0D155400B4F3D9 /* stores_ui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = stores_ui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1147CF8B2C0D155400B4F3D9 /* stores_ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stores_ui.h; sourceTree = "<group>"; };
 		118941BF2C0D1F84005DA10E /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 			children = (
 				118942B62C0DA21A005DA10E /* LocationView.swift */,
 				110E91F32C0EBB81003BF219 /* StoreView.swift */,
+				110E91F72C0EBD6C003BF219 /* StoreCategoryView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110E91F82C0EBD6C003BF219 /* StoreCategoryView.swift in Sources */,
 				118941DE2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift in Sources */,
 				118942B52C0DA1D3005DA10E /* AssetsFramework.swift in Sources */,
 				118942B72C0DA21A005DA10E /* LocationView.swift in Sources */,

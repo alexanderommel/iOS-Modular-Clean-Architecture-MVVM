@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110E91FA2C0EBD93003BF219 /* StoreCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E91F92C0EBD93003BF219 /* StoreCategory.swift */; };
 		11490BA22C0CF10C00888A39 /* stores.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490BA12C0CF10C00888A39 /* stores.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		118941B22C0D1D3E005DA10E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941B12C0D1D3E005DA10E /* Store.swift */; };
 		118941B82C0D1DA0005DA10E /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941B72C0D1DA0005DA10E /* common.framework */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		110E91F92C0EBD93003BF219 /* StoreCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCategory.swift; sourceTree = "<group>"; };
 		11490B9E2C0CF10C00888A39 /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BA12C0CF10C00888A39 /* stores.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stores.h; sourceTree = "<group>"; };
 		118941B12C0D1D3E005DA10E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				118941B12C0D1D3E005DA10E /* Store.swift */,
+				110E91F92C0EBD93003BF219 /* StoreCategory.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110E91FA2C0EBD93003BF219 /* StoreCategory.swift in Sources */,
 				118941B22C0D1D3E005DA10E /* Store.swift in Sources */,
 				118941BD2C0D1E77005DA10E /* StoreRemoteRepository.swift in Sources */,
 			);

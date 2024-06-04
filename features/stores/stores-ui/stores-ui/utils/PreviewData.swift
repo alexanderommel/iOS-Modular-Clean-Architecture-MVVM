@@ -18,3 +18,11 @@ var stors: [Store] = [
           storeImage: "test_resource_restaurant2",rating: 4.8, distance: "5 km",
           location: Location(address: "Nayon calle transversal Quito y Atahualpa",latitude: "asd",longitude: "92"))
 ]
+
+var restaurant_categories: [StoreCategory] = [
+    StoreCategory(id: 1, name: "Pizza",imageName: "test_resource_pizza_logo"),
+    StoreCategory(id: 2, name: "Ice Cream",imageName: "test_resource_icecream_logo"),
+    StoreCategory(id: 3, name: "Hamburguer",imageName: "test_resource_hamburguer_logo"),
+    StoreCategory(id: 4, name: "Asian Food",imageName: "test_resource_japanesefood_logo"),
+    StoreCategory(id: 5, name: "Chicken",imageName: "test_resource_chicken_logo"),
+]
