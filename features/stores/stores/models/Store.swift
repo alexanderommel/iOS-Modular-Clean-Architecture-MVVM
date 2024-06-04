@@ -11,13 +11,13 @@ import common
 public struct Store: Hashable, Codable, Identifiable{
     
     public var id: Int
-    var name: String
-    var deliveryTime: String
-    var deliveryFee: String
-    var storeImage: String
-    var rating: Double
-    var distance: String
-    var location: Location
+    public var name: String
+    public var deliveryTime: String
+    public var deliveryFee: String
+    public var storeImage: String
+    public var rating: Double
+    public var distance: String
+    public var location: Location
     
     public init(id: Int, name: String, deliveryTime: String, deliveryFee: String, storeImage: String, rating: Double, distance: String, location: Location) {
         self.id = id
