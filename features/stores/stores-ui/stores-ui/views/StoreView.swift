@@ -31,7 +31,7 @@ struct StoreView: View {
                         .font(.subheadline)
                 }
                 HStack {
-                    Text("Costo de envío: \(store.deliveryFee)")
+                    Text("Shipping fee: \(store.deliveryFee)")
                         .foregroundStyle(Color.myText34Color)
                         .fontWeight(.semibold)
                         .font(.subheadline)
