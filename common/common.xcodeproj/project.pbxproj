@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110E92062C0EC320003BF219 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E92052C0EC320003BF219 /* Money.swift */; };
 		11490B792C0CF07700888A39 /* common.docc in Sources */ = {isa = PBXBuildFile; fileRef = 11490B782C0CF07700888A39 /* common.docc */; };
 		11490B7A2C0CF07700888A39 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490B772C0CF07700888A39 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		118941B52C0D1D7B005DA10E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941B42C0D1D7B005DA10E /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110E92052C0EC320003BF219 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		11490B742C0CF07700888A39 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B772C0CF07700888A39 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		11490B782C0CF07700888A39 /* common.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = common.docc; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				118941B42C0D1D7B005DA10E /* Location.swift */,
+				110E92052C0EC320003BF219 /* Money.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110E92062C0EC320003BF219 /* Money.swift in Sources */,
 				118941B52C0D1D7B005DA10E /* Location.swift in Sources */,
 				11490B792C0CF07700888A39 /* common.docc in Sources */,
 			);

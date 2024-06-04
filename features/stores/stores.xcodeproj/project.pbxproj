@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		110E91FA2C0EBD93003BF219 /* StoreCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E91F92C0EBD93003BF219 /* StoreCategory.swift */; };
+		110E91FE2C0EC1BC003BF219 /* Catalogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E91FD2C0EC1BC003BF219 /* Catalogue.swift */; };
+		110E92002C0EC1EA003BF219 /* ProductCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E91FF2C0EC1EA003BF219 /* ProductCategory.swift */; };
+		110E92042C0EC2BD003BF219 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E92032C0EC2BD003BF219 /* Product.swift */; };
 		11490BA22C0CF10C00888A39 /* stores.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490BA12C0CF10C00888A39 /* stores.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		118941B22C0D1D3E005DA10E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941B12C0D1D3E005DA10E /* Store.swift */; };
 		118941B82C0D1DA0005DA10E /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941B72C0D1DA0005DA10E /* common.framework */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		110E91F92C0EBD93003BF219 /* StoreCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCategory.swift; sourceTree = "<group>"; };
+		110E91FD2C0EC1BC003BF219 /* Catalogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalogue.swift; sourceTree = "<group>"; };
+		110E91FF2C0EC1EA003BF219 /* ProductCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategory.swift; sourceTree = "<group>"; };
+		110E92032C0EC2BD003BF219 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		11490B9E2C0CF10C00888A39 /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BA12C0CF10C00888A39 /* stores.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stores.h; sourceTree = "<group>"; };
 		118941B12C0D1D3E005DA10E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 			children = (
 				118941B12C0D1D3E005DA10E /* Store.swift */,
 				110E91F92C0EBD93003BF219 /* StoreCategory.swift */,
+				110E91FD2C0EC1BC003BF219 /* Catalogue.swift */,
+				110E91FF2C0EC1EA003BF219 /* ProductCategory.swift */,
+				110E92032C0EC2BD003BF219 /* Product.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -184,8 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				110E91FA2C0EBD93003BF219 /* StoreCategory.swift in Sources */,
+				110E92002C0EC1EA003BF219 /* ProductCategory.swift in Sources */,
 				118941B22C0D1D3E005DA10E /* Store.swift in Sources */,
 				118941BD2C0D1E77005DA10E /* StoreRemoteRepository.swift in Sources */,
+				110E91FE2C0EC1BC003BF219 /* Catalogue.swift in Sources */,
+				110E92042C0EC2BD003BF219 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
