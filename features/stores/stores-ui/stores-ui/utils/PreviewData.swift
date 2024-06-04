@@ -26,3 +26,29 @@ var restaurant_categories: [StoreCategory] = [
     StoreCategory(id: 4, name: "Asian Food",imageName: "test_resource_japanesefood_logo"),
     StoreCategory(id: 5, name: "Chicken",imageName: "test_resource_chicken_logo"),
 ]
+
+var products1: [Product] = [
+    Product(id: 1, name: "Monster Hamburguer", description:
+            "La hamburguesa monstruo X1 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
+            imageUrl: "test_resource_product1", price: Money(amount: 1.2, currency: Money.Currency.USD)),
+    Product(id: 2, name: "Master's Hamburguer", description:
+            "La hamburguesa master X22222 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
+            imageUrl: "test_resource_product1", price: Money(amount: 1.2, currency: Money.Currency.USD))
+]
+
+var products2: [Product] = [
+    Product(id: 1, name: "Funny Pizza", description:
+            "La hamburguesa monstruo X1 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
+            imageUrl: "product1_pizza", price: Money(amount: 15.2, currency: Money.Currency.USD)),
+    Product(id: 2, name: "The Greatest's World Pizza", description:
+            "La hamburguesa master X22222 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
+            imageUrl: "product1_pizza", price: Money(amount: 24, currency: Money.Currency.USD))
+]
+
+var product_categories: [ProductCategory] = [
+    ProductCategory(id: 1, name: "Hamburguesas", products: products1),
+    ProductCategory(id: 2, name: "Pizzas", products: products2),
+    ProductCategory(id: 3, name: "Helados", products: products1)
+]
+
+var catalog = Catalogue(categories: product_categories)
