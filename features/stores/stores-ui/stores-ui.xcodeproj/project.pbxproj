@@ -29,6 +29,7 @@
 		118942D62C0DA377005DA10E /* ui_dandelion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D42C0DA377005DA10E /* ui_dandelion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11F0823B2C101E1A003C91F2 /* CatalogueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */; };
 		11F0823D2C101EFD003C91F2 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823C2C101EFD003C91F2 /* ProductDetailScreen.swift */; };
+		11F0824C2C102D4F003C91F2 /* StoresApiInteractorFaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0824B2C102D4F003C91F2 /* StoresApiInteractorFaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,7 @@
 		118942D42C0DA377005DA10E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueScreen.swift; sourceTree = "<group>"; };
 		11F0823C2C101EFD003C91F2 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
+		11F0824B2C102D4F003C91F2 /* StoresApiInteractorFaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresApiInteractorFaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				118941DD2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift */,
 				118942B42C0DA1D3005DA10E /* AssetsFramework.swift */,
 				110E91F52C0EBBEE003BF219 /* PreviewData.swift */,
+				11F0824B2C102D4F003C91F2 /* StoresApiInteractorFaker.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				11F0823D2C101EFD003C91F2 /* ProductDetailScreen.swift in Sources */,
 				110E91F42C0EBB81003BF219 /* StoreView.swift in Sources */,
 				118941C72C0D201B005DA10E /* StoresScreen.swift in Sources */,
+				11F0824C2C102D4F003C91F2 /* StoresApiInteractorFaker.swift in Sources */,
 				11F0823B2C101E1A003C91F2 /* CatalogueScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

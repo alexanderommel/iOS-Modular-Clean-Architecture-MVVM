@@ -25,5 +25,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environment(StoresViewModel(repository: StoreRemoteRepositoryImpl()))
 }

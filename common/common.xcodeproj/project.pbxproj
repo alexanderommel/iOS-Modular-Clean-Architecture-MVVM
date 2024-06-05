@@ -11,6 +11,10 @@
 		11490B792C0CF07700888A39 /* common.docc in Sources */ = {isa = PBXBuildFile; fileRef = 11490B782C0CF07700888A39 /* common.docc */; };
 		11490B7A2C0CF07700888A39 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490B772C0CF07700888A39 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		118941B52C0D1D7B005DA10E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941B42C0D1D7B005DA10E /* Location.swift */; };
+		11F082402C1021FC003C91F2 /* UseCaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823F2C1021FC003C91F2 /* UseCaseResponse.swift */; };
+		11F082422C10225C003C91F2 /* BusinessRuleFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F082412C10225C003C91F2 /* BusinessRuleFailure.swift */; };
+		11F0824E2C1031D6003C91F2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 11F0824D2C1031D6003C91F2 /* Localizable.xcstrings */; };
+		11F082502C103283003C91F2 /* CommonFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0824F2C103283003C91F2 /* CommonFramework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		11490B772C0CF07700888A39 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		11490B782C0CF07700888A39 /* common.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = common.docc; sourceTree = "<group>"; };
 		118941B42C0D1D7B005DA10E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		11F0823F2C1021FC003C91F2 /* UseCaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseResponse.swift; sourceTree = "<group>"; };
+		11F082412C10225C003C91F2 /* BusinessRuleFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRuleFailure.swift; sourceTree = "<group>"; };
+		11F0824D2C1031D6003C91F2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		11F0824F2C103283003C91F2 /* CommonFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFramework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 				118941B32C0D1D69005DA10E /* models */,
 				11490B772C0CF07700888A39 /* common.h */,
 				11490B782C0CF07700888A39 /* common.docc */,
+				11F0824D2C1031D6003C91F2 /* Localizable.xcstrings */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -63,6 +72,9 @@
 			children = (
 				118941B42C0D1D7B005DA10E /* Location.swift */,
 				110E92052C0EC320003BF219 /* Money.swift */,
+				11F0823F2C1021FC003C91F2 /* UseCaseResponse.swift */,
+				11F082412C10225C003C91F2 /* BusinessRuleFailure.swift */,
+				11F0824F2C103283003C91F2 /* CommonFramework.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -136,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F0824E2C1031D6003C91F2 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F082402C1021FC003C91F2 /* UseCaseResponse.swift in Sources */,
 				110E92062C0EC320003BF219 /* Money.swift in Sources */,
 				118941B52C0D1D7B005DA10E /* Location.swift in Sources */,
+				11F082422C10225C003C91F2 /* BusinessRuleFailure.swift in Sources */,
 				11490B792C0CF07700888A39 /* common.docc in Sources */,
+				11F082502C103283003C91F2 /* CommonFramework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
