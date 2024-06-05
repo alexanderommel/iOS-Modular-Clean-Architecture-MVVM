@@ -28,6 +28,7 @@
 		118942D52C0DA377005DA10E /* ui_dandelion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D42C0DA377005DA10E /* ui_dandelion.framework */; };
 		118942D62C0DA377005DA10E /* ui_dandelion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D42C0DA377005DA10E /* ui_dandelion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11F0823B2C101E1A003C91F2 /* CatalogueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */; };
+		11F0823D2C101EFD003C91F2 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823C2C101EFD003C91F2 /* ProductDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		118942B62C0DA21A005DA10E /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		118942D42C0DA377005DA10E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueScreen.swift; sourceTree = "<group>"; };
+		11F0823C2C101EFD003C91F2 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				118941C62C0D201B005DA10E /* StoresScreen.swift */,
 				11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */,
+				11F0823C2C101EFD003C91F2 /* ProductDetailScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				110E92082C0EC4DF003BF219 /* CatalogueCategoryRowView.swift in Sources */,
 				118941C92C0D205A005DA10E /* StoresViewModel.swift in Sources */,
 				110E91F62C0EBBEE003BF219 /* PreviewData.swift in Sources */,
+				11F0823D2C101EFD003C91F2 /* ProductDetailScreen.swift in Sources */,
 				110E91F42C0EBB81003BF219 /* StoreView.swift in Sources */,
 				118941C72C0D201B005DA10E /* StoresScreen.swift in Sources */,
 				11F0823B2C101E1A003C91F2 /* CatalogueScreen.swift in Sources */,

@@ -111,7 +111,7 @@ struct CatalogueScreen: View {
                         ForEach(c.products){ p in
                             NavigationLink
                             {
-                                
+                                ProductDetailScreen(product: p, store: store)
                             } label: {
                                 ProductView(product: p)
                             }
