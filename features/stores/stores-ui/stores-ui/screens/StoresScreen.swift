@@ -50,7 +50,7 @@ struct StoresScreen: View {
                 ForEach(stores) { store in
                     NavigationLink
                     {
-                        //CatalogueScreen(store: store, catalogue: catalog)
+                        CatalogueScreen(store: store, catalogue: catalog)
                     } label: {
                         StoreView(store: store)
                     }
