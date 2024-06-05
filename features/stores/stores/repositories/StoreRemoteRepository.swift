@@ -11,3 +11,6 @@ import common
 public protocol StoreRemoteRepository{
     func getStores(near location: Location) async -> [Store]
 }
+
+
+

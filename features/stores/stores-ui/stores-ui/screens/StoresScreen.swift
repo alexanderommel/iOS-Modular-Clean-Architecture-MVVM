@@ -21,14 +21,14 @@ struct StoresScreen: View {
         NavigationStack{
             List{
                 HStack{
-                    Text("¡Hola Alexander!")
+                    Text("¡Hi Alexander!")
                         .foregroundStyle(.black)
                         .fontWeight(.bold)
                         .font(.headline)
                 }
                 .listRowSeparator(.hidden)
 
-                Text("Mira lo que tenemos para ti.")
+                Text("Look what we've got for you!")
                     .foregroundStyle(Color.myText34Color)
                     .fontWeight(.semibold)
                     .font(.subheadline)
@@ -40,7 +40,7 @@ struct StoresScreen: View {
                 StoreCategoryRowView(categories: categories)
                     .listRowSeparator(.hidden)
                 
-                Text("Restaurantes disponibles")
+                Text("Restaurants near you")
                     .foregroundStyle(.black)
                     .fontWeight(.bold)
                     .font(.headline)
@@ -50,13 +50,14 @@ struct StoresScreen: View {
                 ForEach(stores) { store in
                     NavigationLink
                     {
+                        CatalogueScreen(store: store, catalogue: catalog)
                     } label: {
                         StoreView(store: store)
                     }
                     
                 }
             }
-            .navigationTitle("Restaurantes")
+            .navigationTitle("Restaurants")
             .listStyle(.plain)
         }
         
