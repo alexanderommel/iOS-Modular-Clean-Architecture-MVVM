@@ -12,15 +12,22 @@ import stores
 
 public class StoresViewModel: Observable{
     @Published var stores: [Store] = []
-    var repository: StoreRemoteRepository
+    @Published var errorLocalized: String = ""
+    var api: StoresApiInteractor
     
-    public init(repository: StoreRemoteRepository) {
-        self.repository = repository
+    public init(api: StoresApiInteractor) {
+        self.api = api
         
         Task{
-            let loc = Location(address: "asd", latitude: "123", longitude: "gsd")
-            let ans = await repository.getStores(near: loc)
-            self.stores = ans
+            let response = api.getStores()
+            switch response{
+            case .Error(let failure):
+                self.errorLocalized = failure.handleBusinessRuleFailure()
+            case .Success(let data):
+                self.stores = data
+            @unknown default:
+                self.stores = []
+            }
         }
         
     }

@@ -13,12 +13,11 @@ import networking
 @main
 struct dandelionApp: App {
         
-    @State var storesViewModel = StoresViewModel(repository: StoreRemoteRepositoryImpl())
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(storesViewModel)
+                
         }
     }
 }

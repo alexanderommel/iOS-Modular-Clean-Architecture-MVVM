@@ -11,6 +11,8 @@ import common
 
 struct StoresScreen: View {
     
+    @Environment(StoresViewModel.self) var vm
+    
     var categories: [StoreCategory]
     var stores: [Store]
     
@@ -47,15 +49,22 @@ struct StoresScreen: View {
                     .padding(.top, 4)
                     .listRowSeparator(.hidden)
                 
-                ForEach(stores) { store in
-                    NavigationLink
-                    {
-                        CatalogueScreen(store: store, catalogue: catalog)
-                    } label: {
-                        StoreView(store: store)
+                if vm.errorLocalized.isEmpty{
+                    ForEach(vm.stores) { store in
+                        NavigationLink
+                        {
+                            CatalogueScreen(store: store, catalogue: catalog)
+                        } label: {
+                            StoreView(store: store)
+                        }
+                        
                     }
-                    
+                }else{
+                    let errorMessage = NSLocalizedString(vm.errorLocalized, bundle: Bundle.fromCommonFramework, comment: "")
+                    Text("Error: \(errorMessage)")
                 }
+                
+                
             }
             .navigationTitle("Restaurants")
             .listStyle(.plain)
@@ -66,5 +75,11 @@ struct StoresScreen: View {
 }
 
 #Preview {
-    StoresScreen(categories: restaurant_categories, stores: stors)
+    
+    var apiInteractor:StoresApiInteractor = StoresApiInteractorFaker1()
+    
+    @State var storesViewModel = StoresViewModel(api: apiInteractor)
+    
+    return StoresScreen(categories: restaurant_categories, stores: stors)
+        .environment(storesViewModel)
 }
