@@ -27,6 +27,7 @@
 		118942B72C0DA21A005DA10E /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118942B62C0DA21A005DA10E /* LocationView.swift */; };
 		118942D52C0DA377005DA10E /* ui_dandelion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D42C0DA377005DA10E /* ui_dandelion.framework */; };
 		118942D62C0DA377005DA10E /* ui_dandelion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D42C0DA377005DA10E /* ui_dandelion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11F0823B2C101E1A003C91F2 /* CatalogueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,7 @@
 		118942B42C0DA1D3005DA10E /* AssetsFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsFramework.swift; sourceTree = "<group>"; };
 		118942B62C0DA21A005DA10E /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		118942D42C0DA377005DA10E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				118941C62C0D201B005DA10E /* StoresScreen.swift */,
+				11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				110E91F62C0EBBEE003BF219 /* PreviewData.swift in Sources */,
 				110E91F42C0EBB81003BF219 /* StoreView.swift in Sources */,
 				118941C72C0D201B005DA10E /* StoresScreen.swift in Sources */,
+				11F0823B2C101E1A003C91F2 /* CatalogueScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

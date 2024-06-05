@@ -22,7 +22,7 @@ struct LocationView: View {
             .padding(.vertical,8)
             
             VStack(alignment: .leading){
-                Text("Tu ubicación")
+                Text("You are here")
                     .foregroundStyle(Color.myText12Color)
                     .fontWeight(.semibold)
                     .font(.subheadline)
