@@ -27,6 +27,7 @@
 		118942B72C0DA21A005DA10E /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118942B62C0DA21A005DA10E /* LocationView.swift */; };
 		118942D52C0DA377005DA10E /* ui_dandelion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D42C0DA377005DA10E /* ui_dandelion.framework */; };
 		118942D62C0DA377005DA10E /* ui_dandelion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D42C0DA377005DA10E /* ui_dandelion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11B8CF4C2C116F7F004F4879 /* CatalogueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF4B2C116F7F004F4879 /* CatalogueViewModel.swift */; };
 		11F0823B2C101E1A003C91F2 /* CatalogueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */; };
 		11F0823D2C101EFD003C91F2 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823C2C101EFD003C91F2 /* ProductDetailScreen.swift */; };
 		11F0824C2C102D4F003C91F2 /* StoresApiInteractorFaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0824B2C102D4F003C91F2 /* StoresApiInteractorFaker.swift */; };
@@ -68,6 +69,7 @@
 		118942B42C0DA1D3005DA10E /* AssetsFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsFramework.swift; sourceTree = "<group>"; };
 		118942B62C0DA21A005DA10E /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		118942D42C0DA377005DA10E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11B8CF4B2C116F7F004F4879 /* CatalogueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewModel.swift; sourceTree = "<group>"; };
 		11F0823A2C101E1A003C91F2 /* CatalogueScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueScreen.swift; sourceTree = "<group>"; };
 		11F0823C2C101EFD003C91F2 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
 		11F0824B2C102D4F003C91F2 /* StoresApiInteractorFaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresApiInteractorFaker.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				118941C82C0D205A005DA10E /* StoresViewModel.swift */,
+				11B8CF4B2C116F7F004F4879 /* CatalogueViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				118941DE2C0D5068005DA10E /* StoreRemoteRepositoryMock.swift in Sources */,
 				110E92022C0EC251003BF219 /* CatalogueProductCategoryView.swift in Sources */,
 				118942B52C0DA1D3005DA10E /* AssetsFramework.swift in Sources */,
+				11B8CF4C2C116F7F004F4879 /* CatalogueViewModel.swift in Sources */,
 				110E920A2C0EC7CA003BF219 /* ProductView.swift in Sources */,
 				118942B72C0DA21A005DA10E /* LocationView.swift in Sources */,
 				110E91FC2C0EC0B6003BF219 /* StoreCategoryRowView.swift in Sources */,

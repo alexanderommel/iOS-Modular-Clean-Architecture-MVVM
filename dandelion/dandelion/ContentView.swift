@@ -12,17 +12,13 @@ import networking
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Image(systemName: "star")
-        }
-        .padding()
+        StoresScreen()
     }
 }
 
 #Preview {
-    ContentView()
+    @StateObject var storesViewModel = StoresViewModel(api: StoresApiInteractorFaker1())
+    
+    return ContentView()
+        .environmentObject(storesViewModel)
 }
