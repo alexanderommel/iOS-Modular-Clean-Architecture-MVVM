@@ -10,5 +10,6 @@ import common
 
 public protocol StoresApiInteractor{
     // The location is retrieved from the user stored data
-    func getStores() -> UseCaseResponse<[Store]>
+    func getStores() async -> UseCaseResponse<[Store]>
+    func getCatalogue(from store: Store) async -> UseCaseResponse<Catalogue>
 }

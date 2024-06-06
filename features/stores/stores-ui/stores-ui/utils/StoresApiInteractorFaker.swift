@@ -10,8 +10,31 @@ import common
 import stores
 
 
-class StoresApiInteractorFaker1: StoresApiInteractor{
-    func getStores() -> UseCaseResponse<[stores.Store]> {
+public class StoresApiInteractorFaker1: StoresApiInteractor{
+    
+    public init(){
+        
+    }
+    
+    public func getCatalogue(from store: stores.Store) async  -> common.UseCaseResponse<stores.Catalogue> {
+        
+        do{
+            try await Task.sleep(nanoseconds: 2_000_000_000)
+        } catch {
+            print("Error catch")
+        }
+        
+        return UseCaseResponse.Success(data: catalog)
+    }
+    
+    public func getStores() async -> UseCaseResponse<[stores.Store]> {
+        
+        do{
+            try await Task.sleep(nanoseconds: 4_000_000_000)
+        } catch {
+            print("Error catch")
+        }
+        
         
         let stors: [Store] = [
             Store(id: 1, name: "Kfc 6 de Diciembre", deliveryTime: "30-40 min", deliveryFee: "2.50",
@@ -28,8 +51,31 @@ class StoresApiInteractorFaker1: StoresApiInteractor{
     
 }
 
-class StoresApiInteractorFaker2: StoresApiInteractor{
-    func getStores() -> UseCaseResponse<[stores.Store]> {
+public class StoresApiInteractorFaker2: StoresApiInteractor{
+    
+    public init(){
+        
+    }
+    
+    public func getCatalogue(from store: stores.Store) async -> common.UseCaseResponse<stores.Catalogue> {
+        
+        do{
+            try await Task.sleep(nanoseconds: 2_000_000_000)
+        } catch {
+            print("Error catch")
+        }
+        
+        return UseCaseResponse.Error(failure: BusinessRuleFailure.noInternetConnection)
+        
+    }
+    
+    public func getStores() async -> UseCaseResponse<[stores.Store]> {
+        
+        do{
+            try await Task.sleep(nanoseconds: 2_000_000_000)
+        } catch {
+            print("Error catch")
+        }
         
         return UseCaseResponse.Error(failure: BusinessRuleFailure.noInternetConnection)
         
