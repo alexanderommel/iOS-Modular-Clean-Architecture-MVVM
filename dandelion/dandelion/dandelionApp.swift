@@ -17,12 +17,13 @@ struct dandelionApp: App {
     
     
     @StateObject var storesViewModel = StoresViewModel(api: StoresApiInteractorFaker1())
-    //@State var catalogueViewModel = CatalogueViewModel(api: StoresApiInteractorFaker1())
+    @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiInteractorFaker1())
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(storesViewModel)
+                .environmentObject(catalogueViewModel)
                 
         }
     }
