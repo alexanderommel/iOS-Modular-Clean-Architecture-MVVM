@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		11490BB62C0CF12300888A39 /* checkout.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490BB52C0CF12300888A39 /* checkout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */; };
+		11B8CF572C12084E004F4879 /* LineItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF562C12084E004F4879 /* LineItemDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11490BB22C0CF12300888A39 /* checkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = checkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BB52C0CF12300888A39 /* checkout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkout.h; sourceTree = "<group>"; };
+		11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutApiInteractor.swift; sourceTree = "<group>"; };
+		11B8CF562C12084E004F4879 /* LineItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItemDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +49,27 @@
 		11490BB42C0CF12300888A39 /* checkout */ = {
 			isa = PBXGroup;
 			children = (
+				11B8CF532C12079A004F4879 /* models */,
+				11B8CF502C120741004F4879 /* api */,
 				11490BB52C0CF12300888A39 /* checkout.h */,
 			);
 			path = checkout;
+			sourceTree = "<group>";
+		};
+		11B8CF502C120741004F4879 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */,
+				11B8CF562C12084E004F4879 /* LineItemDto.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		11B8CF532C12079A004F4879 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +115,7 @@
 				TargetAttributes = {
 					11490BB12C0CF12300888A39 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -129,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */,
+				11B8CF572C12084E004F4879 /* LineItemDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +285,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -290,6 +316,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +327,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
