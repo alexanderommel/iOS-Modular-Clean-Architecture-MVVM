@@ -14,6 +14,7 @@ public enum BusinessRuleFailure {
     case serverInMaintenance
     case noInternetConnection
     case inputMissing(missingField: String)
+    case remoteDataChanged
     
     // Returns the localizable key
     public func handleBusinessRuleFailure() -> String {
@@ -30,6 +31,8 @@ public enum BusinessRuleFailure {
             return "network.no_internet"
         case .inputMissing(let missingField):
             return "missing.\(missingField)"
+        case .remoteDataChanged:
+            return "network.data_changed"
         }
     }
     
