@@ -7,68 +7,102 @@
 
 import SwiftUI
 import stores
+import ui_dandelion
 import common
+import checkout
 
-struct StoresScreen: View {
+public struct StoresScreen: View {
     
-    @Environment(StoresViewModel.self) var vm
+    @State private var toast: Toast? = nil
+    @EnvironmentObject var vm: StoresViewModel
+    @EnvironmentObject var vmProduct: ProductViewModel
     
-    var categories: [StoreCategory]
-    var stores: [Store]
+    private var categories: [StoreCategory] = restaurant_categories
     
-    var locc = Location(address: "asd", latitude: "", longitude: "")
+    func updateToastOnAddedProduct(){
+        toast = Toast(style: .success, message: "Product added successfully", duration: 3.0, width: 400)
+    }
     
-    var body: some View {
+    public init() {
+    }
+    
+    public var body: some View {
+        
+        
+        
         
         NavigationStack{
-            List{
-                HStack{
-                    Text("¡Hi Alexander!")
+            
+            if vm.isLoading {
+                IndeterminateScreenLoadingView()
+            }else{
+                
+                if vmProduct.itemAdded{
+                    Text("")
+                        .onAppear(){
+                            updateToastOnAddedProduct()
+                            vmProduct.itemAdded = false
+                        }.hidden()
+                }
+                
+                List{
+                    HStack{
+                        Text("¡Hi Alexander!")
+                            .foregroundStyle(.black)
+                            .fontWeight(.bold)
+                            .font(.headline)
+                            
+                    }
+                    .listRowSeparator(.hidden)
+                
+
+                    Text("Look what we've got for you!")
+                        .foregroundStyle(Color.myText34Color)
+                        .fontWeight(.semibold)
+                        .font(.subheadline)
+                    
+                    LocationView()
+                        .padding(.top, 2)
+                        .listRowSeparator(.hidden)
+                    
+                    StoreCategoryRowView(categories: categories)
+                        .listRowSeparator(.hidden)
+                    
+                    Text("Restaurants near you")
                         .foregroundStyle(.black)
                         .fontWeight(.bold)
                         .font(.headline)
-                }
-                .listRowSeparator(.hidden)
-
-                Text("Look what we've got for you!")
-                    .foregroundStyle(Color.myText34Color)
-                    .fontWeight(.semibold)
-                    .font(.subheadline)
-                
-                LocationView()
-                    .padding(.top, 2)
-                    .listRowSeparator(.hidden)
-                
-                StoreCategoryRowView(categories: categories)
-                    .listRowSeparator(.hidden)
-                
-                Text("Restaurants near you")
-                    .foregroundStyle(.black)
-                    .fontWeight(.bold)
-                    .font(.headline)
-                    .padding(.top, 4)
-                    .listRowSeparator(.hidden)
-                
-                if vm.errorLocalized.isEmpty{
-                    ForEach(vm.stores) { store in
-                        NavigationLink
-                        {
-                            CatalogueScreen(store: store, catalogue: catalog)
-                        } label: {
-                            StoreView(store: store)
+                        .padding(.top, 4)
+                        .listRowSeparator(.hidden)
+                    
+                    if vm.errorLocalized.isEmpty{
+                        ForEach(vm.stores) { store in
+                            NavigationLink
+                            {
+                                CatalogueScreen(store: store, catalogue: catalog)
+                            } label: {
+                                StoreView(store: store)
+                            }
                         }
-                        
+                    }else{
+                        let errorMessage = NSLocalizedString(vm.errorLocalized, bundle: Bundle.fromCommonFramework, comment: "")
+                        Text("Error: \(errorMessage)")
                     }
-                }else{
-                    let errorMessage = NSLocalizedString(vm.errorLocalized, bundle: Bundle.fromCommonFramework, comment: "")
-                    Text("Error: \(errorMessage)")
+                    
+                    
                 }
-                
+                .navigationTitle("Restaurants")
+                .listStyle(.plain)
                 
             }
-            .navigationTitle("Restaurants")
-            .listStyle(.plain)
+            
+            
+            
+        }.onAppear(){
+            print("ContentView appeared!")
+            vm.fetchStoresData()
         }
+        .toastView(toast: $toast)
         
         
     }
@@ -77,9 +111,17 @@ struct StoresScreen: View {
 #Preview {
     
     var apiInteractor:StoresApiInteractor = StoresApiInteractorFaker1()
+    var apiCheckout:CheckoutApiInteractor = CheckoutApiInteractorFaker1()
     
-    @State var storesViewModel = StoresViewModel(api: apiInteractor)
+    @StateObject var storesViewModel = StoresViewModel(api: apiInteractor)
+    @StateObject var catalogueViewModel = CatalogueViewModel(api: apiInteractor)
     
-    return StoresScreen(categories: restaurant_categories, stores: stors)
-        .environment(storesViewModel)
+    
+
+    @StateObject var productViewModel = ProductViewModel(api: apiCheckout)
+    
+    return StoresScreen()
+        .environmentObject(storesViewModel)
+        .environmentObject(catalogueViewModel)
+        .environmentObject(productViewModel)
 }

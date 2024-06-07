@@ -12,7 +12,7 @@ import stores
 
 struct StoreCategoryRowView: View {
     
-    var categories: [StoreCategory]
+    let categories: [StoreCategory]
     
     var body: some View {
         VStack(alignment: .leading){

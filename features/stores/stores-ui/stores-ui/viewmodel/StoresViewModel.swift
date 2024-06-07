@@ -8,28 +8,54 @@
 import Foundation
 import common
 import stores
+import Combine
 
 
-public class StoresViewModel: Observable{
+public class StoresViewModel: ObservableObject{
     @Published var stores: [Store] = []
     @Published var errorLocalized: String = ""
-    var api: StoresApiInteractor
+    @Published var isLoading = false
+    public var api: StoresApiInteractor
     
     public init(api: StoresApiInteractor) {
         self.api = api
+    }
+    
+    func upp(){
+        self.isLoading = true
+    }
+    
+    public func fetchStoresData(){
+        
+        self.isLoading = true
+        self.errorLocalized = ""
         
         Task{
-            let response = api.getStores()
+            print("Fetching stores...")
+            
+            let response = await api.getStores()
+            print("Stores retrieved")
             switch response{
             case .Error(let failure):
-                self.errorLocalized = failure.handleBusinessRuleFailure()
+                DispatchQueue.main.async {
+                    print("Error failure...")
+                    self.isLoading = false
+                    self.errorLocalized = failure.handleBusinessRuleFailure()
+                }
+                
             case .Success(let data):
-                self.stores = data
+                DispatchQueue.main.async {
+                    print(Thread.current.isMainThread)
+                    print("Success")
+                    self.isLoading = false
+                    self.stores = data
+                    print(self.stores.count.description)
+                }
+                
             @unknown default:
                 self.stores = []
             }
         }
-        
     }
     
     
