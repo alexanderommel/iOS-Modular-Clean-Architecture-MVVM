@@ -36,7 +36,7 @@ struct ToastModifier: ViewModifier {
           width: toast.width
         ) {
           dismissToast()
-        }
+        }.padding(.bottom, 30)
       }
     }
   }
