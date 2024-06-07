@@ -9,13 +9,19 @@ import SwiftUI
 import stores
 import ui_dandelion
 import common
+import checkout
 
 public struct StoresScreen: View {
     
+    @State private var toast: Toast? = nil
     @EnvironmentObject var vm: StoresViewModel
+    @EnvironmentObject var vmProduct: ProductViewModel
     
     private var categories: [StoreCategory] = restaurant_categories
     
+    func updateToastOnAddedProduct(){
+        toast = Toast(style: .success, message: "Product added successfully", duration: 3.0, width: 400)
+    }
     
     public init() {
     }
@@ -24,11 +30,20 @@ public struct StoresScreen: View {
         
         
         
+        
         NavigationStack{
             
             if vm.isLoading {
-                ScreenLoadingView()
+                IndeterminateScreenLoadingView()
             }else{
+                
+                if vmProduct.itemAdded{
+                    Text("")
+                        .onAppear(){
+                            updateToastOnAddedProduct()
+                            vmProduct.itemAdded = false
+                        }.hidden()
+                }
                 
                 List{
                     HStack{
@@ -87,6 +102,7 @@ public struct StoresScreen: View {
             print("ContentView appeared!")
             vm.fetchStoresData()
         }
+        .toastView(toast: $toast)
         
         
     }
@@ -95,9 +111,17 @@ public struct StoresScreen: View {
 #Preview {
     
     var apiInteractor:StoresApiInteractor = StoresApiInteractorFaker1()
+    var apiCheckout:CheckoutApiInteractor = CheckoutApiInteractorFaker1()
     
     @StateObject var storesViewModel = StoresViewModel(api: apiInteractor)
+    @StateObject var catalogueViewModel = CatalogueViewModel(api: apiInteractor)
+    
+    
+
+    @StateObject var productViewModel = ProductViewModel(api: apiCheckout)
     
     return StoresScreen()
         .environmentObject(storesViewModel)
+        .environmentObject(catalogueViewModel)
+        .environmentObject(productViewModel)
 }

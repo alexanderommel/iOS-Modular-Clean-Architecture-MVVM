@@ -8,19 +8,31 @@
 import SwiftUI
 import stores
 import ui_dandelion
+import checkout
 
 struct CatalogueScreen: View {
     
+    @Environment(\.dismiss) var dismiss
     @EnvironmentObject var vm: CatalogueViewModel
-    
+    @EnvironmentObject var vmProduct: ProductViewModel
     let store: Store
     var catalogue: Catalogue?
     
+    
+    
     var body: some View {
+        
         NavigationStack{
             
+            if vmProduct.itemAdded{
+                Text("")
+                    .onAppear(){
+                        dismiss()
+                    }.hidden()
+            }
+            
             if vm.isLoading || vm.catalogue==nil{
-                ScreenLoadingView()
+                IndeterminateScreenLoadingView()
             }else{
                 
                 let catalogue_temp: Catalogue = catalogue!
@@ -30,6 +42,8 @@ struct CatalogueScreen: View {
                         Image(uiImage: loadImageFromAssets(name: store.storeImage))
                             .resizable()
                             .frame(width: .infinity, height: 160)
+                        
+                        
                         
                         
                         VStack {
@@ -138,11 +152,17 @@ struct CatalogueScreen: View {
                 }
                     .listStyle(.plain)
                     .ignoresSafeArea()
+                
+                Text("")
+                    .hidden()
+                    
             }
                 
         }.onAppear(){
             vm.fetchCatalogueData(from: store)
         }
+        
+        
     }
 }
 
@@ -152,6 +172,12 @@ struct CatalogueScreen: View {
     
     @StateObject var catalogueViewModel = CatalogueViewModel(api: apiInteractor)
     
+    var apiCheckout:CheckoutApiInteractor = CheckoutApiInteractorFaker1()
+
+    @StateObject var productViewModel = ProductViewModel(api: apiCheckout)
+    
+    
     return CatalogueScreen(store: stors[0], catalogue: catalog)
         .environmentObject(catalogueViewModel)
+        .environmentObject(productViewModel)
 }

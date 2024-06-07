@@ -22,7 +22,7 @@ struct CatalogueCategoryRowView: View {
                 .padding(.top, 4)
             
             Text("We've got \(categories.count) categories for you!")
-                .foregroundStyle(Color("text12"))
+                .foregroundStyle(Color.myText12Color)
                 .fontWeight(.medium)
                 .font(.caption)
             
