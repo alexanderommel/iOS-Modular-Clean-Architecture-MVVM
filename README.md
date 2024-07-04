@@ -1,6 +1,6 @@
 # Dandelion
  
- This iOS delivery application is being developed following Clean Architecture guidelines and the Agile development methodolog. 
+ This iOS delivery application is being developed following Clean Architecture guidelines and the Agile development methodology. 
 
  ## Purpose
  
