@@ -33,4 +33,4 @@ Since we are using Swift UI, the problem of not having the login screen is trivi
 
 The Screens developed as result of this Sprint are the following:
 
-
+<img width="1006" alt="image" src="https://github.com/alexanderommel/iOS-Clean-Architecture/assets/70469919/de9cc62f-9458-4772-9a0a-818dfed3e2ba">
