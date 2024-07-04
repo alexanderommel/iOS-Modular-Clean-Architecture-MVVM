@@ -14,12 +14,15 @@
 
  ![image](https://github.com/alexanderommel/iOS-Clean-Architecture/assets/70469919/49670047-7877-43e9-b293-ec936d276669)
 
- The modules of the application are:
+ The high-level view of the modules in the application are:
 
  <p align="center">
   <img src="https://github.com/alexanderommel/iOS-Clean-Architecture/assets/70469919/592f47a8-594b-41b9-aa05-20fc26aea3ba">
 </p>
 
+The project is structured in a way that some modules are platform-specific and feature-specific, feature-modularization easies the division of work and since we are developing two applications, the classification of platform-specific modules makes the synchronization tasks more easy and even if we plan to use multiplatform technologies such as Kotlin KMM, the integration of shared code will be much easier since the high-level policies are not platform-specific.
+
+Platform specific modules are the ones that start with the prefix 'ui' inside the features folder the other modules inside the same folder are not platform specific (they can be used in any apple environment). The module core-ios contains libraries that are specific to iOS and are not supported for the rest of platforms.
 
  ## Sprint 1
 
