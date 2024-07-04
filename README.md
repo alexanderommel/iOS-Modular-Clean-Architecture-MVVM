@@ -16,7 +16,9 @@
 
  The modules of the application are:
 
- ![image](https://github.com/alexanderommel/iOS-Clean-Architecture/assets/70469919/592f47a8-594b-41b9-aa05-20fc26aea3ba)
+ <p align="center">
+  <img src="https://github.com/alexanderommel/iOS-Clean-Architecture/assets/70469919/592f47a8-594b-41b9-aa05-20fc26aea3ba">
+</p>
 
 
  ## Sprint 1
