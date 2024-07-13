@@ -2,6 +2,8 @@
  
  This iOS delivery application is being developed following Clean Architecture guidelines and the Agile development methodology. 
 
+ This application is part of a Medium post that I wrote: https://medium.com/@alexanderommelsw/lifecycle-of-an-agile-mobile-application-overview-from-conception-to-deliver-dc2857694a47
+
  ## Purpose
  
  This project aims to show you an example of how the development process of an agile applications looks and show you a modular architecture that envolves at the same time as the new features get integrated into the application.
