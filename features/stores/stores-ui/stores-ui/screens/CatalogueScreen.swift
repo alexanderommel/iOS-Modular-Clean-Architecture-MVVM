@@ -9,6 +9,7 @@ import SwiftUI
 import stores
 import ui_dandelion
 import checkout
+import user
 
 struct CatalogueScreen: View {
     
@@ -168,13 +169,9 @@ struct CatalogueScreen: View {
 
 #Preview {
     
-    var apiInteractor:StoresApiInteractor = StoresApiInteractorFaker1()
-    
-    @StateObject var catalogueViewModel = CatalogueViewModel(api: apiInteractor)
-    
-    var apiCheckout:CheckoutApiInteractor = CheckoutApiInteractorFaker1()
-
-    @StateObject var productViewModel = ProductViewModel(api: apiCheckout)
+    @StateObject var storesViewModel = StoresViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), checkout_api: CheckoutApiInteractorFaker1())
+    @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()))
+    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorFaker1())
     
     
     return CatalogueScreen(store: stors[0], catalogue: catalog)

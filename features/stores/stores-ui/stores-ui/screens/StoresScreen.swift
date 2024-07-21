@@ -9,6 +9,7 @@ import SwiftUI
 import stores
 import ui_dandelion
 import common
+import user
 import checkout
 
 public struct StoresScreen: View {
@@ -138,15 +139,10 @@ public struct StoresScreen: View {
 
 #Preview {
     
-    var apiInteractor:StoresApiInteractor = StoresApiInteractorFaker1()
-    var apiCheckout:CheckoutApiInteractor = CheckoutApiInteractorFaker1()
     
-    @StateObject var storesViewModel = StoresViewModel(api: apiInteractor, checkout_api: apiCheckout)
-    @StateObject var catalogueViewModel = CatalogueViewModel(api: apiInteractor)
-    
-    
-
-    @StateObject var productViewModel = ProductViewModel(api: apiCheckout)
+    @StateObject var storesViewModel = StoresViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), checkout_api: CheckoutApiInteractorFaker1())
+    @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()))
+    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorFaker1())
     
     return StoresScreen()
         .environmentObject(storesViewModel)

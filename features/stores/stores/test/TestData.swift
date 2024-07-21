@@ -1,16 +1,14 @@
 //
-//  PreviewData.swift
-//  stores-ui
+//  TestData.swift
+//  stores
 //
-//  Created by Rommel Valdiviezo on 3/6/24.
+//  Created by Rommel Valdiviezo on 21/7/24.
 //
 
 import Foundation
-import stores
 import common
 
-
-let stors: [Store] = [
+public let stors: [Store] = [
     Store(id: 1, name: "Kfc 6 of December", deliveryTime: "30-40 min", deliveryFee: "2.50",
           storeImage: "test_resource_kfc_store",rating: 4.5, distance: "1.2km",
           location: Location(address: "6 de diciembre y veintimilla",latitude: "asd",longitude: "")),
@@ -19,7 +17,7 @@ let stors: [Store] = [
           location: Location(address: "Nayon calle transversal Quito y Atahualpa",latitude: "asd",longitude: "92"))
 ]
 
-let restaurant_categories: [StoreCategory] = [
+public let restaurant_categories: [StoreCategory] = [
     StoreCategory(id: 1, name: "Pizza",imageName: "test_resource_pizza_logo"),
     StoreCategory(id: 2, name: "Ice Cream",imageName: "test_resource_icecream_logo"),
     StoreCategory(id: 3, name: "Hamburguer",imageName: "test_resource_hamburguer_logo"),
@@ -27,7 +25,7 @@ let restaurant_categories: [StoreCategory] = [
     StoreCategory(id: 5, name: "Chicken",imageName: "test_resource_chicken_logo"),
 ]
 
-let products1: [Product] = [
+public let products1: [Product] = [
     Product(id: 1, name: "Monster Hamburguer", description:
             "La hamburguesa monstruo X1 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
             imageUrl: "test_resource_product1", price: Money(amount: 1.2, currency: Money.Currency.USD)),
@@ -36,7 +34,7 @@ let products1: [Product] = [
             imageUrl: "test_resource_product1", price: Money(amount: 1.2, currency: Money.Currency.USD))
 ]
 
-let products2: [Product] = [
+public let products2: [Product] = [
     Product(id: 1, name: "Funny Pizza", description:
             "La hamburguesa monstruo X1 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
             imageUrl: "product1_pizza", price: Money(amount: 15.2, currency: Money.Currency.USD)),
@@ -45,10 +43,10 @@ let products2: [Product] = [
             imageUrl: "product1_pizza", price: Money(amount: 24, currency: Money.Currency.USD))
 ]
 
-let product_categories: [ProductCategory] = [
+public let product_categories: [ProductCategory] = [
     ProductCategory(id: 1, name: "Hamburguesas", products: products1),
     ProductCategory(id: 2, name: "Pizzas", products: products2),
     ProductCategory(id: 3, name: "Helados", products: products1)
 ]
 
-var catalog = Catalogue(categories: product_categories)
+public var catalog = Catalogue(categories: product_categories)

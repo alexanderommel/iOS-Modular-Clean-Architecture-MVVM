@@ -9,7 +9,8 @@ import Foundation
 import common
 
 public protocol StoreRemoteRepository{
-    func getStores(near location: Location) async -> [Store]
+    func getStores(near location: Location) async -> UseCaseResponse<[Store]>
+    func getCatalogue(storeId: Int) async -> UseCaseResponse<Catalogue>
 }
 
 

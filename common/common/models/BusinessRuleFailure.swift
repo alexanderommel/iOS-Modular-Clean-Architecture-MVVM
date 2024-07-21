@@ -13,6 +13,7 @@ public enum BusinessRuleFailure {
     case accountRestrictedPermissions
     case serverInMaintenance
     case noInternetConnection
+    case locationNotFound
     case inputMissing(missingField: String)
     case remoteDataChanged
     
@@ -33,6 +34,8 @@ public enum BusinessRuleFailure {
             return "missing.\(missingField)"
         case .remoteDataChanged:
             return "network.data_changed"
+        case .locationNotFound:
+            return "location.not_found"
         }
     }
     
