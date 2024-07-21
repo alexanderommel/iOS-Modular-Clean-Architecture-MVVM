@@ -93,9 +93,37 @@ public struct StoresScreen: View {
                 }
                 .navigationTitle("Restaurants")
                 .listStyle(.plain)
+                .listRowSeparator(.hidden)
+                
+                if !vm.shopping_carts.isEmpty {
+                    Button{
+                        
+                    }label: {
+                        HStack{
+                            Image(systemName: "cart.fill")
+                                .padding(.leading, 20)
+                            Spacer()
+                            Text("View shopping carts (\(vm.shopping_carts.count))")
+                                .font(.body)
+                                .fontWeight(.medium)
+                                .padding(.vertical, 20)
+                            Spacer()
+                                
+                        }
+                        .background(Color.black)
+                        .cornerRadius(20)
+                        .foregroundColor(Color.white)
+                        .padding(.top, 5)
+                        
+                        
+                            
+                    }.padding(.horizontal,20)
+                        .listRowSeparator(.hidden)
+                }
+                
+                
                 
             }
-            
             
             
         }.onAppear(){
@@ -113,7 +141,7 @@ public struct StoresScreen: View {
     var apiInteractor:StoresApiInteractor = StoresApiInteractorFaker1()
     var apiCheckout:CheckoutApiInteractor = CheckoutApiInteractorFaker1()
     
-    @StateObject var storesViewModel = StoresViewModel(api: apiInteractor)
+    @StateObject var storesViewModel = StoresViewModel(api: apiInteractor, checkout_api: apiCheckout)
     @StateObject var catalogueViewModel = CatalogueViewModel(api: apiInteractor)
     
     

@@ -7,9 +7,18 @@
 
 import Foundation
 import checkout
+import Combine
 import common
 
 public class CheckoutApiInteractorFaker1: CheckoutApiInteractor{
+    public func getMyShoppingCarts() -> AnyPublisher<[checkout.ShoppingCartDto], Never> {
+        let shopping_cart1 = ShoppingCartDto(storeId: 1, items: [])
+        let shopping_cart2 = ShoppingCartDto(storeId: 2, items: [])
+        let publisher =  Just([shopping_cart1,shopping_cart2])
+        let wrapper = publisher.eraseToAnyPublisher()
+        return wrapper
+    }
+    
     public func addLineItem(lineItem: checkout.LineItemDto, storeId: Int) async -> common.UseCaseResponse<Bool> {
         return UseCaseResponse.Success(data: true)
     }
@@ -18,11 +27,18 @@ public class CheckoutApiInteractorFaker1: CheckoutApiInteractor{
         
     }
     
-    
 }
 
 
 public class CheckoutApiInteractorFaker2: CheckoutApiInteractor{
+    public func getMyShoppingCarts() -> AnyPublisher<[checkout.ShoppingCartDto], Never> {
+        let publisher =  Empty<[ShoppingCartDto],Never>()
+        let wrapper = publisher.eraseToAnyPublisher()
+        return wrapper
+    }
+    
+
+    
     public func addLineItem(lineItem: checkout.LineItemDto, storeId: Int) async -> common.UseCaseResponse<Bool> {
         return UseCaseResponse.Error(failure: BusinessRuleFailure.remoteDataChanged)
     }
@@ -31,3 +47,10 @@ public class CheckoutApiInteractorFaker2: CheckoutApiInteractor{
     }
     
 }
+
+
+let line_items_fake = [
+    LineItemDto(productId: 1, quantity: 5),
+    LineItemDto(productId: 1, quantity: 5),
+    LineItemDto(productId: 1, quantity: 5),
+]

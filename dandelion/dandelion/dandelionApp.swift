@@ -17,7 +17,7 @@ struct dandelionApp: App {
         
     
     
-    @StateObject var storesViewModel = StoresViewModel(api: StoresApiInteractorFaker1())
+    @StateObject var storesViewModel = StoresViewModel(api: StoresApiInteractorFaker1(), checkout_api: CheckoutApiInteractorFaker1())
     @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiInteractorFaker1())
     @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorFaker1())
     
