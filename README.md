@@ -1,4 +1,4 @@
-# IOS agile delivery application with agile
+# iOS app using Clean Architecture with agile development
  
  This iOS delivery application is being developed following Clean Architecture guidelines and the Agile development methodology. 
 
