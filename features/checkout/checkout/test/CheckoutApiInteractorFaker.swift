@@ -1,14 +1,13 @@
 //
 //  CheckoutApiInteractorFaker.swift
-//  stores-ui
+//  checkout
 //
-//  Created by Rommel Valdiviezo on 6/6/24.
+//  Created by Rommel Valdiviezo on 21/7/24.
 //
 
 import Foundation
-import checkout
-import Combine
 import common
+import Combine
 
 public class CheckoutApiInteractorFaker1: CheckoutApiInteractor{
     public func getMyShoppingCarts() -> AnyPublisher<[checkout.ShoppingCartDto], Never> {

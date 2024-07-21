@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11250F532C18C373009DDAC3 /* ShoppingCartDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11250F522C18C373009DDAC3 /* ShoppingCartDto.swift */; };
+		114797E22C4DABEE0091018E /* CheckoutApiInteractorFaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114797E12C4DABEE0091018E /* CheckoutApiInteractorFaker.swift */; };
 		11490BB62C0CF12300888A39 /* checkout.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490BB52C0CF12300888A39 /* checkout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */; };
 		11B8CF572C12084E004F4879 /* LineItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF562C12084E004F4879 /* LineItemDto.swift */; };
@@ -15,6 +16,7 @@
 
 /* Begin PBXFileReference section */
 		11250F522C18C373009DDAC3 /* ShoppingCartDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartDto.swift; sourceTree = "<group>"; };
+		114797E12C4DABEE0091018E /* CheckoutApiInteractorFaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutApiInteractorFaker.swift; sourceTree = "<group>"; };
 		11490BB22C0CF12300888A39 /* checkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = checkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BB52C0CF12300888A39 /* checkout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkout.h; sourceTree = "<group>"; };
 		11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutApiInteractor.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		114797E02C4DABCE0091018E /* test */ = {
+			isa = PBXGroup;
+			children = (
+				114797E12C4DABEE0091018E /* CheckoutApiInteractorFaker.swift */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		11490BA82C0CF12300888A39 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		11490BB42C0CF12300888A39 /* checkout */ = {
 			isa = PBXGroup;
 			children = (
+				114797E02C4DABCE0091018E /* test */,
 				11B8CF532C12079A004F4879 /* models */,
 				11B8CF502C120741004F4879 /* api */,
 				11490BB52C0CF12300888A39 /* checkout.h */,
@@ -157,6 +168,7 @@
 			files = (
 				11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */,
 				11250F532C18C373009DDAC3 /* ShoppingCartDto.swift in Sources */,
+				114797E22C4DABEE0091018E /* CheckoutApiInteractorFaker.swift in Sources */,
 				11B8CF572C12084E004F4879 /* LineItemDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
