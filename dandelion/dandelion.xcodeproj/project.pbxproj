@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		114798152C4FE7980091018E /* checkout_ui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114798142C4FE7980091018E /* checkout_ui.framework */; };
+		114798162C4FE7980091018E /* checkout_ui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 114798142C4FE7980091018E /* checkout_ui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1147CF932C0D158200B4F3D9 /* stores_ui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147CF922C0D158200B4F3D9 /* stores_ui.framework */; };
 		1147CF942C0D158200B4F3D9 /* stores_ui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1147CF922C0D158200B4F3D9 /* stores_ui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11490B352C0CEDC100888A39 /* dandelionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11490B342C0CEDC100888A39 /* dandelionApp.swift */; };
@@ -38,6 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				114798162C4FE7980091018E /* checkout_ui.framework in Embed Frameworks */,
 				11490BDD2C0CF2F900888A39 /* networking.framework in Embed Frameworks */,
 				11490BD32C0CF2EA00888A39 /* core_ios.framework in Embed Frameworks */,
 				11490BE32C0CF30A00888A39 /* checkout.framework in Embed Frameworks */,
@@ -54,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		114798142C4FE7980091018E /* checkout_ui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = checkout_ui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1147CF922C0D158200B4F3D9 /* stores_ui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores_ui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B312C0CEDC100888A39 /* dandelion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dandelion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B342C0CEDC100888A39 /* dandelionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dandelionApp.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114798152C4FE7980091018E /* checkout_ui.framework in Frameworks */,
 				11490BDC2C0CF2F900888A39 /* networking.framework in Frameworks */,
 				11490BD22C0CF2EA00888A39 /* core_ios.framework in Frameworks */,
 				11490BE22C0CF30A00888A39 /* checkout.framework in Frameworks */,
@@ -129,6 +134,7 @@
 		11490BD02C0CF2EA00888A39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				114798142C4FE7980091018E /* checkout_ui.framework */,
 				118942D12C0DA36F005DA10E /* ui_dandelion.framework */,
 				1147CF922C0D158200B4F3D9 /* stores_ui.framework */,
 				11490BE42C0CF31100888A39 /* user.framework */,

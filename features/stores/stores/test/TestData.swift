@@ -11,10 +11,10 @@ import common
 public let stors: [Store] = [
     Store(id: 1, name: "Kfc 6 of December", deliveryTime: "30-40 min", deliveryFee: "2.50",
           storeImage: "test_resource_kfc_store",rating: 4.5, distance: "1.2km",
-          location: Location(address: "6 de diciembre y veintimilla",latitude: "asd",longitude: "")),
+          location: Location(address: "6 de diciembre y veintimilla",latitude: "asd",longitude: ""),cartImage: ""),
     Store(id: 2, name: "Purple House Restaurant", deliveryTime: "20-30 min", deliveryFee: "2.35",
           storeImage: "test_resource_restaurant2",rating: 4.8, distance: "5 km",
-          location: Location(address: "Nayon calle transversal Quito y Atahualpa",latitude: "asd",longitude: "92"))
+          location: Location(address: "Nayon calle transversal Quito y Atahualpa",latitude: "asd",longitude: "92"),cartImage: "")
 ]
 
 public let restaurant_categories: [StoreCategory] = [
