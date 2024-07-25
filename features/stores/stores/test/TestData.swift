@@ -29,7 +29,7 @@ public let products1: [Product] = [
     Product(id: 1, name: "Monster Hamburguer", description:
             "La hamburguesa monstruo X1 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
             imageUrl: "test_resource_product1", price: Money(amount: 1.2, currency: Money.Currency.USD)),
-    Product(id: 2, name: "Master's Hamburguer", description:
+    Product(id: 2, name: "Master's Hamburguer Gow", description:
             "La hamburguesa master X22222 tiene los siguientes ingredientes: carne, queso, tomates pequeños, aceitinas, queso parmesano, y lechuga.",
             imageUrl: "test_resource_product1", price: Money(amount: 1.2, currency: Money.Currency.USD))
 ]
