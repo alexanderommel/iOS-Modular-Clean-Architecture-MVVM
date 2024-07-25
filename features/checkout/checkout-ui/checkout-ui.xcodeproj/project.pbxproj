@@ -17,6 +17,7 @@
 		114798282C4FEADC0091018E /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 114798262C4FEADC0091018E /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1147982A2C4FEAE50091018E /* ui_dandelion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114798292C4FEAE50091018E /* ui_dandelion.framework */; };
 		1147982B2C4FEAE50091018E /* ui_dandelion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 114798292C4FEAE50091018E /* ui_dandelion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		114798642C5219EC0091018E /* ShoppingCartsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114798632C5219EC0091018E /* ShoppingCartsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,7 @@
 		114798222C4FEAD70091018E /* checkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = checkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		114798262C4FEADC0091018E /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		114798292C4FEAE50091018E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		114798632C5219EC0091018E /* ShoppingCartsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		114798182C4FE7CD0091018E /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				114798632C5219EC0091018E /* ShoppingCartsScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				1147981C2C4FE8210091018E /* ShoppingCartView.swift in Sources */,
 				1147981E2C4FE8400091018E /* AssetsFramework.swift in Sources */,
+				114798642C5219EC0091018E /* ShoppingCartsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

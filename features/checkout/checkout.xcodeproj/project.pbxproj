@@ -19,6 +19,7 @@
 		114797FB2C4FE67E0091018E /* ShippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114797FA2C4FE67E0091018E /* ShippingInfo.swift */; };
 		114797FD2C4FE68C0091018E /* BillingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114797FC2C4FE68C0091018E /* BillingInfo.swift */; };
 		114797FF2C4FE69D0091018E /* ShoppingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114797FE2C4FE69D0091018E /* ShoppingInfo.swift */; };
+		114798682C521CC50091018E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114798672C521CC50091018E /* TestData.swift */; };
 		11490BB62C0CF12300888A39 /* checkout.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490BB52C0CF12300888A39 /* checkout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */; };
 		11B8CF572C12084E004F4879 /* LineItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF562C12084E004F4879 /* LineItemDto.swift */; };
@@ -50,6 +51,7 @@
 		114797FA2C4FE67E0091018E /* ShippingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingInfo.swift; sourceTree = "<group>"; };
 		114797FC2C4FE68C0091018E /* BillingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingInfo.swift; sourceTree = "<group>"; };
 		114797FE2C4FE69D0091018E /* ShoppingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingInfo.swift; sourceTree = "<group>"; };
+		114798672C521CC50091018E /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		11490BB22C0CF12300888A39 /* checkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = checkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BB52C0CF12300888A39 /* checkout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkout.h; sourceTree = "<group>"; };
 		11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutApiInteractor.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				114797E12C4DABEE0091018E /* CheckoutApiInteractorFaker.swift */,
+				114798672C521CC50091018E /* TestData.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				114797FD2C4FE68C0091018E /* BillingInfo.swift in Sources */,
+				114798682C521CC50091018E /* TestData.swift in Sources */,
 				114797FF2C4FE69D0091018E /* ShoppingInfo.swift in Sources */,
 				114797ED2C4FE3550091018E /* ShoppingCart.swift in Sources */,
 				11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */,
