@@ -7,29 +7,33 @@
 
 import SwiftUI
 import ui_dandelion
+import checkout
 
 struct ShoppingCartView: View {
+    
+    let cart: ShoppingCart
+    
     var body: some View {
         VStack{
             HStack{
-                Image(uiImage: loadImageFromAssets(name: "store1"))
+                Image(uiImage: loadImageFromAssets(name: cart.store.storeImage))
                     .resizable()
                     .frame(maxWidth: 62, maxHeight: 62)
                     .aspectRatio(contentMode: .fit)
                     .clipShape(.circle)
                 VStack(alignment: .leading){
-                    Text("Sal, Pimienta y Hambrienta")
+                    Text(cart.store.name)
                         .font(.headline)
                         .fontWeight(.semibold)
                     HStack{
-                        Text("2 items")
+                        Text("\(cart.items.count) items")
                             .font(.headline)
                             .fontWeight(.medium)
                             .foregroundStyle(Color.myText34Color)
                         Image(systemName: "circle.fill")
                             .resizable()
                             .frame(maxWidth: 8, maxHeight: 8)
-                        Text("$5.50")
+                        Text(cart.total_amount.formatedAmount)
                             .font(.headline)
                             .fontWeight(.medium)
                             .foregroundStyle(Color.myText34Color)
@@ -91,5 +95,5 @@ struct ShoppingCartView: View {
 }
 
 #Preview {
-    ShoppingCartView()
+    return ShoppingCartView(cart: shopping_carts[1])
 }
