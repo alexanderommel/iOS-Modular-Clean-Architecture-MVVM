@@ -9,7 +9,8 @@ import Foundation
 import common
 import stores
 
-public struct LineItem{
+public struct LineItem: Identifiable{
+    public var id: ObjectIdentifier
     public var product: Product
     public var quantity: Int
     public var total_amount: Money{
@@ -20,7 +21,8 @@ public struct LineItem{
             return Money(amount: nsdec.decimalValue, currency: .USD)
         }
     }
-    public init(product: Product, quantity: Int) {
+    public init(id: ObjectIdentifier, product: Product, quantity: Int) {
+        self.id = id
         self.product = product
         self.quantity = quantity
     }
