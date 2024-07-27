@@ -15,7 +15,7 @@ public struct Money: Codable, Hashable {
     public var currency: Currency
     public var formatedAmount: String{
         get{
-            return "\(amount) $"
+            return "$\(amount)"
         }
     }
     
