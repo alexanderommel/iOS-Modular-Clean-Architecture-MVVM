@@ -38,7 +38,7 @@ struct LineItemView: View {
                             .foregroundStyle(.gray)
                         Text(item.total_amount.formatedAmount)
                             .font(.subheadline)
-                            .fontWeight(.medium)
+                            .fontWeight(.bold)
                             .foregroundStyle(Color.myPrimaryColor)
                     }
                 }
@@ -48,7 +48,7 @@ struct LineItemView: View {
                     .resizable()
                     .frame(maxWidth: 32, maxHeight: 32)
                     .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(Color.black)
             }
         }
     }

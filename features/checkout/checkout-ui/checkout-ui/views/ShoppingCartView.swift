@@ -18,7 +18,7 @@ struct ShoppingCartView: View {
             HStack{
                 Image(uiImage: loadImageFromAssets(name: cart.store.storeImage))
                     .resizable()
-                    .frame(maxWidth: 62, maxHeight: 62)
+                    .frame(width: 62, height: 62)
                     .aspectRatio(contentMode: .fit)
                     .clipShape(.circle)
                 VStack(alignment: .leading){
@@ -59,7 +59,8 @@ struct ShoppingCartView: View {
                     Text("View cart")
                         .font(.body)
                         .fontWeight(.medium)
-                        .frame(maxWidth: .infinity, maxHeight: 45)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 40)
                         .foregroundColor(Color.white)
                         .background(Color.black)
                         .cornerRadius(10)
@@ -76,7 +77,8 @@ struct ShoppingCartView: View {
                     Text("View store")
                         .font(.body)
                         .fontWeight(.medium)
-                        .frame(maxWidth: .infinity, maxHeight: 45)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 40)
                         .foregroundColor(Color.black)
                         .background(Color.myPrimarySurfaceGrayColor)
                         .cornerRadius(10)

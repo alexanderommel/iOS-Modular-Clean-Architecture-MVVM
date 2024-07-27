@@ -20,6 +20,9 @@
 		114798642C5219EC0091018E /* ShoppingCartsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114798632C5219EC0091018E /* ShoppingCartsScreen.swift */; };
 		1147986C2C5287860091018E /* LineItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1147986B2C5287860091018E /* LineItemView.swift */; };
 		1147986E2C52896C0091018E /* ShoppingCartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1147986D2C52896C0091018E /* ShoppingCartScreen.swift */; };
+		114798732C5556C20091018E /* CheckoutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114798722C5556C20091018E /* CheckoutScreen.swift */; };
+		114798792C555CF80091018E /* core_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114798782C555CF80091018E /* core_ios.framework */; };
+		1147987A2C555CF80091018E /* core_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 114798782C555CF80091018E /* core_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +33,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1147982B2C4FEAE50091018E /* ui_dandelion.framework in Embed Frameworks */,
+				1147987A2C555CF80091018E /* core_ios.framework in Embed Frameworks */,
 				114798242C4FEAD70091018E /* checkout.framework in Embed Frameworks */,
 				114798282C4FEADC0091018E /* common.framework in Embed Frameworks */,
 			);
@@ -50,6 +54,8 @@
 		114798632C5219EC0091018E /* ShoppingCartsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartsScreen.swift; sourceTree = "<group>"; };
 		1147986B2C5287860091018E /* LineItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItemView.swift; sourceTree = "<group>"; };
 		1147986D2C52896C0091018E /* ShoppingCartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartScreen.swift; sourceTree = "<group>"; };
+		114798722C5556C20091018E /* CheckoutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutScreen.swift; sourceTree = "<group>"; };
+		114798782C555CF80091018E /* core_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = core_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1147982A2C4FEAE50091018E /* ui_dandelion.framework in Frameworks */,
+				114798792C555CF80091018E /* core_ios.framework in Frameworks */,
 				114798232C4FEAD70091018E /* checkout.framework in Frameworks */,
 				114798272C4FEADC0091018E /* common.framework in Frameworks */,
 			);
@@ -110,6 +117,7 @@
 			children = (
 				114798632C5219EC0091018E /* ShoppingCartsScreen.swift */,
 				1147986D2C52896C0091018E /* ShoppingCartScreen.swift */,
+				114798722C5556C20091018E /* CheckoutScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 		114798212C4FEAD70091018E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				114798782C555CF80091018E /* core_ios.framework */,
 				114798292C4FEAE50091018E /* ui_dandelion.framework */,
 				114798262C4FEADC0091018E /* common.framework */,
 				114798222C4FEAD70091018E /* checkout.framework */,
@@ -224,6 +233,7 @@
 				1147981C2C4FE8210091018E /* ShoppingCartView.swift in Sources */,
 				1147981E2C4FE8400091018E /* AssetsFramework.swift in Sources */,
 				114798642C5219EC0091018E /* ShoppingCartsScreen.swift in Sources */,
+				114798732C5556C20091018E /* CheckoutScreen.swift in Sources */,
 				1147986E2C52896C0091018E /* ShoppingCartScreen.swift in Sources */,
 				1147986C2C5287860091018E /* LineItemView.swift in Sources */,
 			);

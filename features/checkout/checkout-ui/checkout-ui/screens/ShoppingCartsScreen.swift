@@ -65,7 +65,6 @@ struct ShoppingCartsScreen: View {
                 ForEach(carts){ cart in
                     ShoppingCartView(cart: cart)
                         .padding(.top, 10)
-                        .listRowSeparator(.hidden)
                 }.listRowSeparator(.hidden)
             }
             .listStyle(.plain)
