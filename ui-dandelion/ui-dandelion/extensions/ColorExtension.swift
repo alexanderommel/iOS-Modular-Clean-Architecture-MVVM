@@ -15,6 +15,10 @@ public extension Color {
     static var myPrimarySurfaceColor: Color {
         return Color("primary_surface", bundle: .myFramework)
     }
+    static var myPrimarySurfaceGrayColor: Color {
+        return Color("primary_surface_gray", bundle: .myFramework)
+    }
+
     static var myText12Color: Color {
         return Color("text12", bundle: .myFramework)
     }
