@@ -78,8 +78,8 @@ struct ShoppingCartsScreen: View {
                 .font(.body)
                 .fontWeight(.medium)
                 .frame(maxWidth: .infinity, maxHeight: 60)
-                .foregroundColor(Color.white)
-                .background(Color.red)
+                .foregroundColor(Color.black)
+                .background(Color.myPrimarySurfaceGrayColor)
                 .cornerRadius(20)
         }.padding(.horizontal,20)
     }
