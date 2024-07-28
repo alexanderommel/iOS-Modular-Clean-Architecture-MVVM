@@ -39,3 +39,12 @@ Since we are using Swift UI, the problem of not having the login screen is trivi
 The Screens developed as result of this Sprint are the following:
 
 <img width="1006" alt="image" src="https://github.com/alexanderommel/iOS-Clean-Architecture/assets/70469919/de9cc62f-9458-4772-9a0a-818dfed3e2ba">
+
+
+## Sprint 2
+
+The objective of this sprint is to develop the checkout module.
+
+<img width="1006" alt="image" src="https://github.com/user-attachments/assets/7c38c344-d413-4022-8556-51e0f9be839e">
+
+
