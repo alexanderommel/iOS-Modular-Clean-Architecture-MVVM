@@ -26,6 +26,7 @@ public struct MapView: View {
     
     public init(locationCoordinate: CLLocationCoordinate2D) {
         self.locationCoordinate = locationCoordinate
+        print("MapView: Rendering map for latitude \(locationCoordinate.latitude) and longitude \(locationCoordinate.longitude)")
     }
     
 }
