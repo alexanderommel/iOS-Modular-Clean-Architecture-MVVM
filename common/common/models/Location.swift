@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Location: Codable, Hashable{
+public struct Place: Codable, Hashable{
     public var address: String
     public var latitude: String
     public var longitude: String
