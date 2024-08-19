@@ -10,13 +10,21 @@ import stores
 import ui_dandelion
 import common
 import user
+import persistence
 import checkout
+import routing
 
 public struct StoresScreen: View {
+    
+    @FetchRequest private var checkouts: FetchedResults<persistence.Checkout>
+    private let user: user.User
+    private let checkoutMapper: CheckoutDomainMapper
     
     @State private var toast: Toast? = nil
     @EnvironmentObject var vm: StoresViewModel
     @EnvironmentObject var vmProduct: ProductViewModel
+    @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject var router: NavigationRouter
     
     private var categories: [StoreCategory] = restaurant_categories
     
@@ -24,7 +32,14 @@ public struct StoresScreen: View {
         toast = Toast(style: .success, message: "Product added successfully", duration: 3.0, width: 400)
     }
     
-    public init() {
+    public init(user: user.User) {
+        print("StoresScreen: User id \(user.id)")
+        self.user = user
+        self.checkoutMapper = CheckoutDomainMapper()
+        self._checkouts = FetchRequest(
+            sortDescriptors: [],
+            predicate: NSPredicate(format: "user_id == %@", user.id)
+        )
     }
     
     public var body: some View {
@@ -32,7 +47,7 @@ public struct StoresScreen: View {
         
         
         
-        NavigationStack{
+        VStack{
             
             if vm.isLoading {
                 IndeterminateScreenLoadingView()
@@ -78,12 +93,12 @@ public struct StoresScreen: View {
                     
                     if vm.errorLocalized.isEmpty{
                         ForEach(vm.stores) { store in
-                            NavigationLink
-                            {
-                                CatalogueScreen(store: store, catalogue: catalog)
-                            } label: {
+                            Button{
+                                router.navigate(to: .catalogueScreen(store: store, catalogue: catalog))
+                            }label: {
                                 StoreView(store: store)
                             }
+                            
                         }
                     }else{
                         let errorMessage = NSLocalizedString(vm.errorLocalized, bundle: Bundle.fromCommonFramework, comment: "")
@@ -92,19 +107,24 @@ public struct StoresScreen: View {
                     
                     
                 }
-                .navigationTitle("Restaurants")
+                .navigationTitle("Restaurants near you")
                 .listStyle(.plain)
                 .listRowSeparator(.hidden)
                 
-                if !vm.shopping_carts.isEmpty {
+                if !vm.checkouts.isEmpty {
                     Button{
-                        
+                        var dtos: [CheckoutDto] = []
+                        for chk in checkouts{
+                            let dto = checkoutMapper.mapToDomainModel(entity: chk)
+                            dtos.append(dto)
+                        }
+                        router.navigate(to: .shoppingCartsScreen(carts: vm.checkouts))
                     }label: {
                         HStack{
                             Image(systemName: "cart.fill")
                                 .padding(.leading, 20)
                             Spacer()
-                            Text("View shopping carts (\(vm.shopping_carts.count))")
+                            Text("View shopping carts (\(checkouts.count))")
                                 .font(.body)
                                 .fontWeight(.medium)
                                 .padding(.vertical, 20)
@@ -130,6 +150,12 @@ public struct StoresScreen: View {
         }.onAppear(){
             print("ContentView appeared!")
             vm.fetchStoresData()
+            var dtos: [CheckoutDto] = []
+            for chk in checkouts{
+                let dto = checkoutMapper.mapToDomainModel(entity: chk)
+                dtos.append(dto)
+            }
+            vm.mappingCheckoutData(checkouts: dtos)
         }
         .toastView(toast: $toast)
         
@@ -139,13 +165,24 @@ public struct StoresScreen: View {
 
 #Preview {
     
+    let context = AppDatabase.preview.container.newBackgroundContext()
     
-    @StateObject var storesViewModel = StoresViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), checkout_api: CheckoutApiInteractorFaker1())
+    
+    @StateObject var storesViewModel = StoresViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()),
+                                        checkout_api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: AppDatabase.preview.container.newBackgroundContext()))
+    )
+    
+    
     @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()))
-    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorFaker1())
     
-    return StoresScreen()
+    
+    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: context)))
+    
+    @StateObject var router = NavigationRouter()
+    
+    return StoresScreen(user: test_user)
         .environmentObject(storesViewModel)
         .environmentObject(catalogueViewModel)
         .environmentObject(productViewModel)
+        .environmentObject(router)
 }
