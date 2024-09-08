@@ -10,7 +10,7 @@ import common
 import stores
 
 public struct LineItem: Identifiable{
-    public var id: ObjectIdentifier
+    public var id: String
     public var product: Product
     public var quantity: Int
     public var total_amount: Money{
@@ -21,7 +21,7 @@ public struct LineItem: Identifiable{
             return Money(amount: nsdec.decimalValue, currency: .USD)
         }
     }
-    public init(id: ObjectIdentifier, product: Product, quantity: Int) {
+    public init(id: String, product: Product, quantity: Int) {
         self.id = id
         self.product = product
         self.quantity = quantity

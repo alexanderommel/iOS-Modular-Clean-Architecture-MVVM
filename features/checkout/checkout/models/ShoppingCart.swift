@@ -9,18 +9,19 @@ import Foundation
 import common
 import stores
 
-public struct ShoppingCart: Identifiable{
-    public var id: ObjectIdentifier
+public struct ShoppingCart{
     public var items: [LineItem]
     public var store: Store
     public var total_amount: Money{
         get{
-            
-            return Money(amount: Decimal(10), currency: .USD)
+            var total = Money()
+            for i in items{
+                total.addAndUpdate(plus: i.total_amount)
+            }
+            return total
         }
     }
-    public init(id: ObjectIdentifier, items: [LineItem], store: Store) {
-        self.id = id
+    public init( items: [LineItem], store: Store) {
         self.items = items
         self.store = store
     }
