@@ -12,7 +12,7 @@
 		114798772C555A070091018E /* PaymentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114798762C555A070091018E /* PaymentCard.swift */; };
 		11490B792C0CF07700888A39 /* common.docc in Sources */ = {isa = PBXBuildFile; fileRef = 11490B782C0CF07700888A39 /* common.docc */; };
 		11490B7A2C0CF07700888A39 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490B772C0CF07700888A39 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		118941B52C0D1D7B005DA10E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941B42C0D1D7B005DA10E /* Location.swift */; };
+		116A44972C8DEEC0008E442F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941B42C0D1D7B005DA10E /* Location.swift */; };
 		11F082402C1021FC003C91F2 /* UseCaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0823F2C1021FC003C91F2 /* UseCaseResponse.swift */; };
 		11F082422C10225C003C91F2 /* BusinessRuleFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F082412C10225C003C91F2 /* BusinessRuleFailure.swift */; };
 		11F0824E2C1031D6003C91F2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 11F0824D2C1031D6003C91F2 /* Localizable.xcstrings */; };
@@ -167,7 +167,7 @@
 			files = (
 				11F082402C1021FC003C91F2 /* UseCaseResponse.swift in Sources */,
 				110E92062C0EC320003BF219 /* Money.swift in Sources */,
-				118941B52C0D1D7B005DA10E /* Location.swift in Sources */,
+				116A44972C8DEEC0008E442F /* Location.swift in Sources */,
 				114798752C55583E0091018E /* PaymentMethod.swift in Sources */,
 				114798772C555A070091018E /* PaymentCard.swift in Sources */,
 				11F082422C10225C003C91F2 /* BusinessRuleFailure.swift in Sources */,
@@ -323,7 +323,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
@@ -363,7 +363,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
