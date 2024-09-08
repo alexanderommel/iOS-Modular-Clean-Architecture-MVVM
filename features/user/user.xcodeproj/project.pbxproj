@@ -10,13 +10,32 @@
 		114797CD2C4D95F40091018E /* UserApiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114797CC2C4D95F40091018E /* UserApiInteractor.swift */; };
 		114797D72C4DA7360091018E /* UserApiInteractorFaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114797D62C4DA7360091018E /* UserApiInteractorFaker.swift */; };
 		11490BCA2C0CF14B00888A39 /* user.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490BC92C0CF14B00888A39 /* user.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		116A44682C8D14D6008E442F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A44672C8D14D6008E442F /* User.swift */; };
+		116A449A2C8DEEEC008E442F /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116A44992C8DEEEC008E442F /* common.framework */; };
+		116A449B2C8DEEEC008E442F /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 116A44992C8DEEEC008E442F /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		116A449C2C8DEEED008E442F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				116A449B2C8DEEEC008E442F /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		114797CC2C4D95F40091018E /* UserApiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiInteractor.swift; sourceTree = "<group>"; };
 		114797D62C4DA7360091018E /* UserApiInteractorFaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiInteractorFaker.swift; sourceTree = "<group>"; };
 		11490BC62C0CF14B00888A39 /* user.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = user.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BC92C0CF14B00888A39 /* user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = user.h; sourceTree = "<group>"; };
+		116A44672C8D14D6008E442F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		116A44992C8DEEEC008E442F /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116A449A2C8DEEEC008E442F /* common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +78,7 @@
 			children = (
 				11490BC82C0CF14B00888A39 /* user */,
 				11490BC72C0CF14B00888A39 /* Products */,
+				116A44982C8DEEEC008E442F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,12 +93,29 @@
 		11490BC82C0CF14B00888A39 /* user */ = {
 			isa = PBXGroup;
 			children = (
+				116A44662C8D14CA008E442F /* models */,
 				114797D52C4DA7250091018E /* test */,
 				114797CB2C4D95E00091018E /* api */,
 				110E920B2C0EE8E1003BF219 /* repositories */,
 				11490BC92C0CF14B00888A39 /* user.h */,
 			);
 			path = user;
+			sourceTree = "<group>";
+		};
+		116A44662C8D14CA008E442F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				116A44672C8D14D6008E442F /* User.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		116A44982C8DEEEC008E442F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				116A44992C8DEEEC008E442F /* common.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +140,7 @@
 				11490BC22C0CF14B00888A39 /* Sources */,
 				11490BC32C0CF14B00888A39 /* Frameworks */,
 				11490BC42C0CF14B00888A39 /* Resources */,
+				116A449C2C8DEEED008E442F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +201,7 @@
 			files = (
 				114797D72C4DA7360091018E /* UserApiInteractorFaker.swift in Sources */,
 				114797CD2C4D95F40091018E /* UserApiInteractor.swift in Sources */,
+				116A44682C8D14D6008E442F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

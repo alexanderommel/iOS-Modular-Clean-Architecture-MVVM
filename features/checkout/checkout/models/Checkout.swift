@@ -11,17 +11,17 @@ import stores
 
 
 public struct Checkout: Identifiable{
-    public var id: ObjectIdentifier
+    public var id: String
     public var shoppingCart: ShoppingCart
     public var store: Store
     public var requestUtensils: Bool
     public var note: String?
-    public var deliveryLocation: Location
+    public var deliveryLocation: Place
     public var deliveryInstructions: String?
     public var paymenthMetod: PaymentMethod
     public var paymentCard: PaymentCard?
     
-    public init(id: ObjectIdentifier, shoppingCart: ShoppingCart, store: Store, requestUtensils: Bool, note: String? = nil, deliveryLocation: Location, deliveryInstructions: String? = nil, paymenthMetod: PaymentMethod, paymentCard: PaymentCard? = nil) {
+    public init(id: String, shoppingCart: ShoppingCart, store: Store, requestUtensils: Bool, note: String? = nil, deliveryLocation: Place, deliveryInstructions: String? = nil, paymenthMetod: PaymentMethod, paymentCard: PaymentCard? = nil) {
         self.id = id
         self.shoppingCart = shoppingCart
         self.store = store

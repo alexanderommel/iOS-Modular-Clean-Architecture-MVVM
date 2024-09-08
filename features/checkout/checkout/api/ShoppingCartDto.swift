@@ -9,7 +9,7 @@ import Foundation
 
 public class ShoppingCartDto{
     public let storeId: Int
-    public let items: [LineItemDto]
+    public var items: [LineItemDto]
     
     public init(storeId: Int, items: [LineItemDto]) {
         self.storeId = storeId

@@ -29,6 +29,9 @@
 		11490BE32C0CF30A00888A39 /* checkout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11490BE12C0CF30A00888A39 /* checkout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11490BE52C0CF31100888A39 /* user.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11490BE42C0CF31100888A39 /* user.framework */; };
 		11490BE62C0CF31100888A39 /* user.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11490BE42C0CF31100888A39 /* user.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		116A443F2C8D0571008E442F /* routing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116A443E2C8D0571008E442F /* routing.framework */; };
+		116A44402C8D0572008E442F /* routing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 116A443E2C8D0571008E442F /* routing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		116A44612C8D0BA3008E442F /* NavigationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A44602C8D0BA3008E442F /* NavigationExtension.swift */; };
 		118942D22C0DA36F005DA10E /* ui_dandelion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D12C0DA36F005DA10E /* ui_dandelion.framework */; };
 		118942D32C0DA36F005DA10E /* ui_dandelion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118942D12C0DA36F005DA10E /* ui_dandelion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -45,6 +48,7 @@
 				11490BD32C0CF2EA00888A39 /* core_ios.framework in Embed Frameworks */,
 				11490BE32C0CF30A00888A39 /* checkout.framework in Embed Frameworks */,
 				11490BE02C0CF30600888A39 /* stores.framework in Embed Frameworks */,
+				116A44402C8D0572008E442F /* routing.framework in Embed Frameworks */,
 				1147CF942C0D158200B4F3D9 /* stores_ui.framework in Embed Frameworks */,
 				11490BD72C0CF2EF00888A39 /* common.framework in Embed Frameworks */,
 				118942D32C0DA36F005DA10E /* ui_dandelion.framework in Embed Frameworks */,
@@ -71,6 +75,8 @@
 		11490BDE2C0CF30600888A39 /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BE12C0CF30A00888A39 /* checkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = checkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BE42C0CF31100888A39 /* user.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = user.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		116A443E2C8D0571008E442F /* routing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = routing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		116A44602C8D0BA3008E442F /* NavigationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExtension.swift; sourceTree = "<group>"; };
 		118942D12C0DA36F005DA10E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +90,7 @@
 				11490BD22C0CF2EA00888A39 /* core_ios.framework in Frameworks */,
 				11490BE22C0CF30A00888A39 /* checkout.framework in Frameworks */,
 				11490BDF2C0CF30600888A39 /* stores.framework in Frameworks */,
+				116A443F2C8D0571008E442F /* routing.framework in Frameworks */,
 				1147CF932C0D158200B4F3D9 /* stores_ui.framework in Frameworks */,
 				11490BD62C0CF2EF00888A39 /* common.framework in Frameworks */,
 				118942D22C0DA36F005DA10E /* ui_dandelion.framework in Frameworks */,
@@ -119,6 +126,7 @@
 				11490B362C0CEDC100888A39 /* ContentView.swift */,
 				11490B382C0CEDC200888A39 /* Assets.xcassets */,
 				11490B3A2C0CEDC200888A39 /* Preview Content */,
+				116A44602C8D0BA3008E442F /* NavigationExtension.swift */,
 			);
 			path = dandelion;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 		11490BD02C0CF2EA00888A39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				116A443E2C8D0571008E442F /* routing.framework */,
 				114798142C4FE7980091018E /* checkout_ui.framework */,
 				118942D12C0DA36F005DA10E /* ui_dandelion.framework */,
 				1147CF922C0D158200B4F3D9 /* stores_ui.framework */,
@@ -221,6 +230,7 @@
 			files = (
 				11490B372C0CEDC100888A39 /* ContentView.swift in Sources */,
 				11490B352C0CEDC100888A39 /* dandelionApp.swift in Sources */,
+				116A44612C8D0BA3008E442F /* NavigationExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

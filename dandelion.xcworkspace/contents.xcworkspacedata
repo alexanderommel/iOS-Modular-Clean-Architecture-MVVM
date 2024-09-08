@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:routing/routing.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:features/checkout/checkout-ui/checkout-ui.xcodeproj">
    </FileRef>
    <FileRef

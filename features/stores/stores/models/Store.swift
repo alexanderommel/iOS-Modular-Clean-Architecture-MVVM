@@ -18,9 +18,9 @@ public struct Store: Hashable, Codable, Identifiable{
     public var cartImage: String
     public var rating: Double
     public var distance: String
-    public var location: Location
+    public var location: Place
     
-    public init(id: Int, name: String, deliveryTime: String, deliveryFee: String, storeImage: String, rating: Double, distance: String, location: Location, cartImage: String) {
+    public init(id: Int, name: String, deliveryTime: String, deliveryFee: String, storeImage: String, rating: Double, distance: String, location: Place, cartImage: String) {
         self.id = id
         self.name = name
         self.deliveryTime = deliveryTime

@@ -44,7 +44,7 @@ struct ProductView: View {
                     
             }.fixedSize(horizontal: false, vertical: true)
         }
-        .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+        .cornerRadius(3.0)
 
     }
 }

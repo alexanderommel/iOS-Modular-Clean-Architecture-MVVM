@@ -12,5 +12,6 @@ import Combine
 // The appropiate shopping cart is found based on the storeId
 public protocol CheckoutApiInteractor{
     func addLineItem(lineItem: LineItemDto, storeId: Int) async -> UseCaseResponse<Bool>
+    func updateCheckouts(checkouts: [CheckoutDto]) async -> UseCaseResponse<[Checkout]>
     func getMyShoppingCarts() -> AnyPublisher<[ShoppingCartDto],Never>
 }

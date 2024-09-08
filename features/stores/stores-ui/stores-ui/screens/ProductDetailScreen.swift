@@ -9,8 +9,13 @@ import SwiftUI
 import stores
 import ui_dandelion
 import checkout
+import routing
+import user
+import persistence
 
-struct ProductDetailScreen: View {
+public struct ProductDetailScreen: View {
+    
+    @EnvironmentObject var router: NavigationRouter
     
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var vm: ProductViewModel
@@ -18,10 +23,13 @@ struct ProductDetailScreen: View {
     let product: Product
     let store: Store
     
+    public init(product: Product, store: Store){
+        self.product = product
+        self.store = store
+    }
     
     
-    var body: some View {
-        
+    public var body: some View {
         
         
         
@@ -29,8 +37,7 @@ struct ProductDetailScreen: View {
             if vm.itemAdded{
                 Text("")
                     .onAppear(){
-                        dismiss()
-                        
+                        router.navigateToRoot()
                     }
             }
             Image(uiImage: loadImageFromAssets(name: product.imageUrl))
@@ -46,6 +53,7 @@ struct ProductDetailScreen: View {
                     .fontWeight(.semibold)
                     .font(.headline)
             }
+            .padding(.top, 8)
             HStack{
                 Text(product.name)
                     .fontWeight(.semibold)
@@ -96,7 +104,7 @@ struct ProductDetailScreen: View {
                 
                 Button(
                     action: {
-                        let line_item = LineItemDto(productId: 1, quantity: 1)
+                        let line_item = LineItemDto(productId: product.id, quantity: Int(quantity))
                         vm.addLineItemToShoppingCart(store_id: store.id, line_item: line_item)
 
                     }, label: {
@@ -125,9 +133,18 @@ struct ProductDetailScreen: View {
 
 
 #Preview {
-    var apiInteractor:CheckoutApiInteractor = CheckoutApiInteractorFaker1()
-    @StateObject var vm = ProductViewModel(api: apiInteractor)
+    
+    let context = AppDatabase.preview.container.newBackgroundContext()
+
+    
+    @StateObject var router = NavigationRouter()
+    
+    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: context)))
+    
+    
+    
     return ProductDetailScreen(product: products1[0], store: stors[0])
-        .environmentObject(vm)
+        .environmentObject(productViewModel)
+        .environmentObject(router)
     
 }

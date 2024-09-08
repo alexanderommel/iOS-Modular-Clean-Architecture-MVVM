@@ -9,8 +9,9 @@ import Foundation
 
 // Used to transfer data between layers
 public class LineItemDto{
+    public var id: String=""
     public let productId: Int
-    public let quantity: Int
+    public var quantity: Int
     
     public init(productId: Int, quantity: Int) {
         self.productId = productId

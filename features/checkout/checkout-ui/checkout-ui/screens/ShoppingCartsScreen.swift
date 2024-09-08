@@ -7,84 +7,95 @@
 
 import SwiftUI
 import checkout
+import routing
 
 
-struct ShoppingCartsScreen: View {
+public struct ShoppingCartsScreen: View {
     
-    let carts: [ShoppingCart]
-
+    @EnvironmentObject var router: NavigationRouter
     
-    var body: some View {
-        VStack {
-            List{
-                VStack(alignment: .leading) {
-                    Text("Carts")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    
-                    Group{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Shopping Carts")
-                                    .font(.headline)
-                                    .fontWeight(.semibold)
-                                Text("If you wait too long for finishing a cart, the prices might have changed.")
-                                    .fontWeight(.medium)
-                                    .font(.caption)
-                                    .padding(.top, 0.5)
-                                
-                                
-                            }
-                            
-                            Spacer()
-                            Image(systemName: "cart.fill")
-                                .resizable()
-                                .frame(width: 36, height: 28)
-                                .foregroundStyle(Color.myPrimaryColor)
-                        }
-                        .padding(.vertical, 14)
-                        .padding(.horizontal, 16)
-                    }
-                    .background(Color.white)
-                    .cornerRadius(10.0)
-                    .shadow(color: Color(hue: 1.0, saturation: 0.027, brightness: 0.829),radius: 1)
+    let carts: [Checkout]
 
-                    
-                    Rectangle()
-                        .listRowInsets(EdgeInsets())
-                        .frame(width: .infinity, height: 1.2)
-                        .foregroundStyle(Color(hue: 1.0, saturation: 0.0, brightness: 0.943))
-                        .padding(.top, 10)
-                    
+    public init(carts: [Checkout]) {
+        self.carts = carts
+    }
+    
+    public var body: some View {
+        List{
+            VStack(alignment: .leading) {
+                
+                Group{
                     HStack{
+                        VStack(alignment: .leading){
+                            Text("Shopping Carts")
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                            Text("If you wait too long for finishing a cart, the prices might have changed.")
+                                .fontWeight(.medium)
+                                .font(.caption)
+                                .padding(.top, 0.5)
+                            
+                            
+                        }
+                        
                         Spacer()
+                        Image(systemName: "cart.fill")
+                            .resizable()
+                            .frame(width: 36, height: 28)
+                            .foregroundStyle(Color.myPrimaryColor)
                     }
-                    
+                    .padding(.vertical, 14)
+                    .padding(.horizontal, 16)
+                }
+                .background(Color.white)
+                .cornerRadius(10.0)
+                .shadow(color: Color(hue: 1.0, saturation: 0.027, brightness: 0.829),radius: 1)
+                .listRowSeparator(.hidden)
+
+                
+                Rectangle()
+                    .listRowInsets(EdgeInsets())
+                    .frame(width: .infinity, height: 1.2)
+                    .foregroundStyle(Color(hue: 1.0, saturation: 0.0, brightness: 0.943))
+                    .padding(.top, 10)
+                
+                HStack{
+                    Spacer()
                 }
                 
-                ForEach(carts){ cart in
-                    ShoppingCartView(cart: cart)
-                        .padding(.top, 10)
-                }.listRowSeparator(.hidden)
             }
-            .listStyle(.plain)
-        .listRowSeparator(.hidden)
-        }
-        
-        Button{
+            .listRowSeparator(.hidden)
             
-        }label: {
-            Text("Delete shopping carts")
-                .font(.body)
-                .fontWeight(.medium)
-                .frame(maxWidth: .infinity, maxHeight: 60)
-                .foregroundColor(Color.black)
-                .background(Color.myPrimarySurfaceGrayColor)
-                .cornerRadius(20)
-        }.padding(.horizontal,20)
+            ForEach(carts){ checkout in
+                Button{
+                    router.navigate(to: .shoppingCartScreen(cart: checkout))
+                }label: {
+                    ShoppingCartView(cart: checkout.shoppingCart)
+                        .padding(.top, 10)
+                }
+            }.listRowSeparator(.hidden)
+        }
+        .listStyle(.plain)
+        .listRowSeparator(.hidden)
+        .navigationTitle("Shopping Carts")
+    
+    
+    Button{
+        
+    }label: {
+        Text("Delete shopping carts")
+            .font(.body)
+            .fontWeight(.medium)
+            .frame(maxWidth: .infinity, maxHeight: 60)
+            .foregroundColor(Color.black)
+            .background(Color.myPrimarySurfaceGrayColor)
+            .cornerRadius(20)
+    }.padding(.horizontal,20)
     }
 }
 
 #Preview {
-    return ShoppingCartsScreen(carts: shopping_carts)
+    @StateObject var router = NavigationRouter()
+    return ShoppingCartsScreen(carts: checkouts_data)
+        .environmentObject(router)
 }
