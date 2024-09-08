@@ -9,7 +9,9 @@ import Foundation
 import common
 import Combine
 
-public class CheckoutApiInteractorFaker1: CheckoutApiInteractor{
+/**
+
+public class CheckoutApiInteractorFaker10: CheckoutApiInteractor{
     public func getMyShoppingCarts() -> AnyPublisher<[checkout.ShoppingCartDto], Never> {
         let shopping_cart1 = ShoppingCartDto(storeId: 1, items: [])
         let shopping_cart2 = ShoppingCartDto(storeId: 2, items: [])
@@ -29,7 +31,7 @@ public class CheckoutApiInteractorFaker1: CheckoutApiInteractor{
 }
 
 
-public class CheckoutApiInteractorFaker2: CheckoutApiInteractor{
+public class CheckoutApiInteractorFaker20: CheckoutApiInteractor{
     public func getMyShoppingCarts() -> AnyPublisher<[checkout.ShoppingCartDto], Never> {
         let publisher =  Empty<[ShoppingCartDto],Never>()
         let wrapper = publisher.eraseToAnyPublisher()
@@ -46,6 +48,8 @@ public class CheckoutApiInteractorFaker2: CheckoutApiInteractor{
     }
     
 }
+ 
+ */
 
 
 let line_items_fake = [
