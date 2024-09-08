@@ -9,9 +9,13 @@ import SwiftUI
 import stores
 import ui_dandelion
 import checkout
+import persistence
+import routing
 import user
 
-struct CatalogueScreen: View {
+public struct CatalogueScreen: View {
+    
+    @EnvironmentObject var router: NavigationRouter
     
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var vm: CatalogueViewModel
@@ -19,12 +23,14 @@ struct CatalogueScreen: View {
     let store: Store
     var catalogue: Catalogue?
     
+    public init(store: Store, catalogue: Catalogue?){
+        self.store = store
+        self.catalogue = catalogue
+    }
     
-    
-    var body: some View {
+    public var body: some View {
         
-        NavigationStack{
-            
+        VStack{
             if vmProduct.itemAdded{
                 Text("")
                     .onAppear(){
@@ -44,7 +50,7 @@ struct CatalogueScreen: View {
                             .resizable()
                             .frame(width: .infinity, height: 160)
                         
-                        
+
                         
                         
                         VStack {
@@ -101,7 +107,17 @@ struct CatalogueScreen: View {
                         }
                         
                             
-
+                        Button{
+                            router.navigateBack()
+                        }label: {
+                            Image(systemName: "chevron.backward.circle.fill")
+                                .resizable()
+                                .foregroundStyle(Color.blue)
+                                .frame(width: 32, height: 32)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                                .padding(.top, 58)
+                                .padding(.leading, 20)
+                        }
                         
                         
                         Image(uiImage: loadImageFromAssets(name: store.storeImage))
@@ -134,16 +150,16 @@ struct CatalogueScreen: View {
                             Text(c.name)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             ForEach(c.products){ p in
-                                NavigationLink
-                                {
-                                    ProductDetailScreen(product: p, store: store)
+                                Button{
+                                    router.navigate(to: .productScreen(product: p, store: store))
                                 } label: {
                                     ProductView(product: p)
                                 }
                                 .buttonStyle(.plain)
                                 .listRowSeparator(.hidden)
                                 .ignoresSafeArea()
-                            }
+
+                                                            }
                             Rectangle()
                                 .listRowInsets(EdgeInsets())
                                 .frame(width: .infinity, height: 1.2)
@@ -158,10 +174,10 @@ struct CatalogueScreen: View {
                     .hidden()
                     
             }
-                
         }.onAppear(){
             vm.fetchCatalogueData(from: store)
         }
+        .navigationBarBackButtonHidden()
         
         
     }
@@ -169,12 +185,23 @@ struct CatalogueScreen: View {
 
 #Preview {
     
-    @StateObject var storesViewModel = StoresViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), checkout_api: CheckoutApiInteractorFaker1())
-    @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()))
-    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorFaker1())
+    let context = AppDatabase.preview.container.newBackgroundContext()
+
     
+    @StateObject var storesViewModel = StoresViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()),
+                                        checkout_api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: AppDatabase.preview.container.newBackgroundContext()))
+    )
+    
+    @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()))
+    
+    
+    
+    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: context)))
+    
+    @StateObject var router = NavigationRouter()
     
     return CatalogueScreen(store: stors[0], catalogue: catalog)
         .environmentObject(catalogueViewModel)
         .environmentObject(productViewModel)
+        .environmentObject(router)
 }
