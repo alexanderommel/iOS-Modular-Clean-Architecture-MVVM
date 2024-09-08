@@ -8,22 +8,26 @@
 import SwiftUI
 import stores
 import checkout
+import routing
 
-struct ShoppingCartScreen: View {
+public struct ShoppingCartScreen: View {
     
-    let cart: ShoppingCart
+    @EnvironmentObject var router: NavigationRouter
+    
+    let cart: Checkout
     
     @State var request_utensils: Bool = false
     
-    var body: some View {
+    public init(cart: Checkout){
+        self.cart = cart
+    }
+    
+    public var body: some View {
         VStack(alignment: .leading) {
             
-            Text(cart.store.name)
-                .font(.title)
-                .fontWeight(.semibold)
-                .padding(20)
+
             List{
-                ForEach(cart.items){ it in
+                ForEach(cart.shoppingCart.items){ it in
                     LineItemView(item: it)
                         .listRowSeparator(.hidden)
                 }
@@ -78,18 +82,20 @@ struct ShoppingCartScreen: View {
                         .font(.title2)
                         .fontWeight(.semibold)
                     Spacer()
-                    Text(cart.total_amount.formatedAmount)
+                    Text(cart.shoppingCart.total_amount.formatedAmount)
                         .font(.title2)
                         .fontWeight(.semibold)
                 }
                 .padding(.top, 16)
                 .listRowSeparator(.hidden)
+                .navigationTitle(cart.store.name)
                 
             }
             .listStyle(.inset)
+            .listRowSeparator(.hidden)
             
             Button{
-                
+                router.navigate(to: .checkoutScreen(checkout: cart))
             }label: {
                 Text("Go to checkout")
                     .font(.body)
@@ -105,5 +111,7 @@ struct ShoppingCartScreen: View {
 }
 
 #Preview {
-    return ShoppingCartScreen(cart: shopping_carts[0])
+    @StateObject var router = NavigationRouter()
+    return ShoppingCartScreen(cart: checkout1)
+        .environmentObject(router)
 }

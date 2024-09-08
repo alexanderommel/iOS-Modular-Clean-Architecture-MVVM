@@ -8,18 +8,22 @@
 import SwiftUI
 import checkout
 import MapKit
+import routing
 import core_ios
 
-struct CheckoutScreen: View {
+public struct CheckoutScreen: View {
+    
+    @EnvironmentObject var router: NavigationRouter
     
     let c: Checkout
     
-    var body: some View {
+    public init(c: Checkout) {
+        print("CheckoutScreen: Init")
+        self.c = c
+    }
+    
+    public var body: some View {
         VStack(alignment: .leading){
-            Text(c.store.name)
-                .font(.title)
-                .fontWeight(.semibold)
-                .padding(20)
             
             List{
                 
@@ -142,8 +146,44 @@ struct CheckoutScreen: View {
                 }
                 .padding(.top, 10)
                 
+                HStack{
+                    Text("Subtotal")
+                        .font(.title3)
+                        .foregroundStyle(.gray)
+                    Spacer()
+                    Text(c.shoppingCart.total_amount.formatedAmount)
+                        .font(.title3)
+                }.listRowSeparator(.hidden)
+                
+                HStack{
+                    Text("Delivery Fee")
+                        .font(.title3)
+                        .foregroundStyle(.gray)
+                    Spacer()
+                    Text("$\(c.store.deliveryFee)")
+                        .font(.title3)
+                }.listRowSeparator(.hidden)
+                
+                HStack{
+                    Text("Total")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.black)
+                    Spacer()
+                    Text("$\(total_amount())")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                }.listRowSeparator(.hidden)
+                
+                Text("If you are not in the delivery location in the time of the delivery, the courier will drop the package here even if you're not there.")
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.gray)
+                    .padding(.vertical, 4)
+                    .listRowSeparator(.hidden)
+                
                 
             }.listStyle(.inset)
+                .listRowSeparator(.hidden)
             
             Button{
                 
@@ -159,12 +199,22 @@ struct CheckoutScreen: View {
             
             
         }
+        .navigationTitle(c.store.name)
+    }
+    
+    func total_amount() -> String {
+        let fee = Decimal(string: c.store.deliveryFee)!
+        let subtotal = c.shoppingCart.total_amount.amount
+        let total = subtotal + fee
+        return total.description
     }
     
     func payment_name() -> String{
         var paymenth_name = "Cash"
         if c.paymentCard != nil {
             paymenth_name = c.paymentCard!.name
+        }else{
+            return "(Payment) \(paymenth_name)"
         }
         return "(Card) \(paymenth_name)"
     }
@@ -183,5 +233,7 @@ struct CheckoutScreen: View {
 
 
 #Preview {
+    @StateObject var router = NavigationRouter()
     return CheckoutScreen(c: checkout1)
+        .environmentObject(router)
 }
