@@ -11,7 +11,9 @@ import common
 
 public protocol UserApiInteractor{
     
-    func getUserPreferedDeliveryLocation() async -> Location?
+    
+    func getUserPreferedDeliveryLocation() async -> Place?
     func isAuthenticated() async -> Bool
+    func getAuthenticatedUser() async -> User
     
 }
