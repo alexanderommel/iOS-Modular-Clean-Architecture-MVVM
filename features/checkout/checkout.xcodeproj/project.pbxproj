@@ -21,6 +21,11 @@
 		114797FF2C4FE69D0091018E /* ShoppingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114797FE2C4FE69D0091018E /* ShoppingInfo.swift */; };
 		114798682C521CC50091018E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114798672C521CC50091018E /* TestData.swift */; };
 		11490BB62C0CF12300888A39 /* checkout.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490BB52C0CF12300888A39 /* checkout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		116A446A2C8D18B0008E442F /* CheckoutApiInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A44692C8D18B0008E442F /* CheckoutApiInteractorImpl.swift */; };
+		116A446D2C8D1916008E442F /* AddLineItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A446C2C8D1916008E442F /* AddLineItemUseCase.swift */; };
+		116A44822C8D1E1C008E442F /* CheckoutDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A44812C8D1E1C008E442F /* CheckoutDto.swift */; };
+		116A44852C8D24AF008E442F /* CheckoutLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A44842C8D24AF008E442F /* CheckoutLocalRepository.swift */; };
+		116A449E2C8DF98A008E442F /* UpdateCheckoutsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A449D2C8DF98A008E442F /* UpdateCheckoutsUseCase.swift */; };
 		11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */; };
 		11B8CF572C12084E004F4879 /* LineItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8CF562C12084E004F4879 /* LineItemDto.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,11 @@
 		114798672C521CC50091018E /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		11490BB22C0CF12300888A39 /* checkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = checkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490BB52C0CF12300888A39 /* checkout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkout.h; sourceTree = "<group>"; };
+		116A44692C8D18B0008E442F /* CheckoutApiInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutApiInteractorImpl.swift; sourceTree = "<group>"; usesTabs = 1; };
+		116A446C2C8D1916008E442F /* AddLineItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLineItemUseCase.swift; sourceTree = "<group>"; };
+		116A44812C8D1E1C008E442F /* CheckoutDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutDto.swift; sourceTree = "<group>"; };
+		116A44842C8D24AF008E442F /* CheckoutLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutLocalRepository.swift; sourceTree = "<group>"; };
+		116A449D2C8DF98A008E442F /* UpdateCheckoutsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheckoutsUseCase.swift; sourceTree = "<group>"; };
 		11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutApiInteractor.swift; sourceTree = "<group>"; };
 		11B8CF562C12084E004F4879 /* LineItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItemDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +119,8 @@
 		11490BB42C0CF12300888A39 /* checkout */ = {
 			isa = PBXGroup;
 			children = (
+				116A44832C8D249E008E442F /* repositories */,
+				116A446B2C8D1907008E442F /* usecases */,
 				114797E02C4DABCE0091018E /* test */,
 				11B8CF532C12079A004F4879 /* models */,
 				11B8CF502C120741004F4879 /* api */,
@@ -117,12 +129,31 @@
 			path = checkout;
 			sourceTree = "<group>";
 		};
+		116A446B2C8D1907008E442F /* usecases */ = {
+			isa = PBXGroup;
+			children = (
+				116A446C2C8D1916008E442F /* AddLineItemUseCase.swift */,
+				116A449D2C8DF98A008E442F /* UpdateCheckoutsUseCase.swift */,
+			);
+			path = usecases;
+			sourceTree = "<group>";
+		};
+		116A44832C8D249E008E442F /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				116A44842C8D24AF008E442F /* CheckoutLocalRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
 		11B8CF502C120741004F4879 /* api */ = {
 			isa = PBXGroup;
 			children = (
 				11B8CF512C120761004F4879 /* CheckoutApiInteractor.swift */,
 				11B8CF562C12084E004F4879 /* LineItemDto.swift */,
 				11250F522C18C373009DDAC3 /* ShoppingCartDto.swift */,
+				116A44692C8D18B0008E442F /* CheckoutApiInteractorImpl.swift */,
+				116A44812C8D1E1C008E442F /* CheckoutDto.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -222,13 +253,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				114797FD2C4FE68C0091018E /* BillingInfo.swift in Sources */,
+				116A446D2C8D1916008E442F /* AddLineItemUseCase.swift in Sources */,
 				114798682C521CC50091018E /* TestData.swift in Sources */,
 				114797FF2C4FE69D0091018E /* ShoppingInfo.swift in Sources */,
+				116A446A2C8D18B0008E442F /* CheckoutApiInteractorImpl.swift in Sources */,
 				114797ED2C4FE3550091018E /* ShoppingCart.swift in Sources */,
 				11B8CF522C120761004F4879 /* CheckoutApiInteractor.swift in Sources */,
 				11250F532C18C373009DDAC3 /* ShoppingCartDto.swift in Sources */,
+				116A44852C8D24AF008E442F /* CheckoutLocalRepository.swift in Sources */,
 				114797FB2C4FE67E0091018E /* ShippingInfo.swift in Sources */,
+				116A44822C8D1E1C008E442F /* CheckoutDto.swift in Sources */,
 				114797F92C4FE3DF0091018E /* LineItem.swift in Sources */,
+				116A449E2C8DF98A008E442F /* UpdateCheckoutsUseCase.swift in Sources */,
 				114797EF2C4FE3760091018E /* Checkout.swift in Sources */,
 				114797E22C4DABEE0091018E /* CheckoutApiInteractorFaker.swift in Sources */,
 				11B8CF572C12084E004F4879 /* LineItemDto.swift in Sources */,
