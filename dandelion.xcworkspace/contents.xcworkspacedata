@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:features/orders/orders-ui/orders-ui.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:features/orders/orders.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:routing/routing.xcodeproj">
    </FileRef>
    <FileRef
