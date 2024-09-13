@@ -20,8 +20,9 @@ public struct Checkout: Identifiable{
     public var deliveryInstructions: String?
     public var paymenthMetod: PaymentMethod
     public var paymentCard: PaymentCard?
+    public var linkedToOrder: Bool
     
-    public init(id: String, shoppingCart: ShoppingCart, store: Store, requestUtensils: Bool, note: String? = nil, deliveryLocation: Place, deliveryInstructions: String? = nil, paymenthMetod: PaymentMethod, paymentCard: PaymentCard? = nil) {
+    public init(id: String, shoppingCart: ShoppingCart, store: Store, requestUtensils: Bool, note: String? = nil, deliveryLocation: Place, deliveryInstructions: String? = nil, paymenthMetod: PaymentMethod, paymentCard: PaymentCard? = nil, linkedToOrder: Bool = false) {
         self.id = id
         self.shoppingCart = shoppingCart
         self.store = store
@@ -31,6 +32,7 @@ public struct Checkout: Identifiable{
         self.deliveryInstructions = deliveryInstructions
         self.paymenthMetod = paymenthMetod
         self.paymentCard = paymentCard
+        self.linkedToOrder = linkedToOrder
     }
     
 }
