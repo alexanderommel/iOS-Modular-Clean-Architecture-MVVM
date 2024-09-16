@@ -12,6 +12,15 @@
     <br />
     <a href="https://www.youtube.com/watch?v=FACdjfABhXs">View Demo</a>
   </p>
+
+  <p align="center">
+    This app was developed also for Android devices
+    <br />
+    <a href="https://github.com/alexanderommel/Android-Modular-Clean-Architecture-MVVM">Repository of the Android app</a>
+   
+  </p>
+
+  
 </div>
 
 ## About The Project
