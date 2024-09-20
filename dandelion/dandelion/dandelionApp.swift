@@ -10,10 +10,11 @@ import stores_ui
 import stores
 import checkout
 import networking
-import routing
-import user
-import common
 import persistence
+import api
+import domain
+import test_resources
+import core_ios
 
 @main
 struct dandelionApp: App {

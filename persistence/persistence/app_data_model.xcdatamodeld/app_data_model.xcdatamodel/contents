@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Checkout" representedClassName="Checkout" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CheckoutAXS" representedClassName="CheckoutAXS" syncable="YES" codeGenerationType="class">
         <attribute name="last_total_value" attributeType="String"/>
         <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="payment_method" attributeType="String"/>
@@ -9,10 +9,23 @@
         <attribute name="user_id" attributeType="String"/>
         <relationship name="shopping_cart" toMany="YES" deletionRule="Cascade" destinationEntity="LineItem" inverseName="checkout" inverseEntity="LineItem"/>
     </entity>
+    <entity name="CheckoutEntity" representedClassName="CheckoutEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="deliveryInstructions" optional="YES" attributeType="String"/>
+        <attribute name="deliveryLocation" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="linkedToOrder" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="paymentCard" optional="YES" attributeType="String"/>
+        <attribute name="paymenthMetod" attributeType="String"/>
+        <attribute name="requestUtensils" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="shoppingCart" attributeType="String"/>
+        <attribute name="store" attributeType="String"/>
+        <attribute name="userId" attributeType="String"/>
+    </entity>
     <entity name="LineItem" representedClassName="LineItem" syncable="YES" codeGenerationType="class">
         <attribute name="product_id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="quantity" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="checkout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Checkout" inverseName="shopping_cart" inverseEntity="Checkout"/>
+        <relationship name="checkout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutAXS" inverseName="shopping_cart" inverseEntity="CheckoutAXS"/>
     </entity>
     <entity name="ShoppingCart" representedClassName="ShoppingCart" syncable="YES">
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>

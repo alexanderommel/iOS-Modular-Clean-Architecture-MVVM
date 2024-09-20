@@ -13,21 +13,19 @@
 		110E92022C0EC251003BF219 /* CatalogueProductCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E92012C0EC251003BF219 /* CatalogueProductCategoryView.swift */; };
 		110E92082C0EC4DF003BF219 /* CatalogueCategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E92072C0EC4DF003BF219 /* CatalogueCategoryRowView.swift */; };
 		110E920A2C0EC7CA003BF219 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E92092C0EC7CA003BF219 /* ProductView.swift */; };
-		11250ECD2C12B9FC009DDAC3 /* checkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11250ECC2C12B9FC009DDAC3 /* checkout.framework */; };
-		11250ECE2C12B9FC009DDAC3 /* checkout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11250ECC2C12B9FC009DDAC3 /* checkout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1147CF8C2C0D155400B4F3D9 /* stores_ui.h in Headers */ = {isa = PBXBuildFile; fileRef = 1147CF8B2C0D155400B4F3D9 /* stores_ui.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		116A445E2C8D0AC6008E442F /* routing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116A445D2C8D0AC6008E442F /* routing.framework */; };
-		116A445F2C8D0AC6008E442F /* routing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 116A445D2C8D0AC6008E442F /* routing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		116A448C2C8D68BE008E442F /* persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116A448B2C8D68BE008E442F /* persistence.framework */; };
 		116A448D2C8D68BE008E442F /* persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 116A448B2C8D68BE008E442F /* persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		116A448F2C8D6A43008E442F /* user.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116A448E2C8D6A43008E442F /* user.framework */; };
-		116A44902C8D6A43008E442F /* user.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 116A448E2C8D6A43008E442F /* user.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		118941C02C0D1F84005DA10E /* stores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941BF2C0D1F84005DA10E /* stores.framework */; };
-		118941C12C0D1F84005DA10E /* stores.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118941BF2C0D1F84005DA10E /* stores.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		117523C12C9BA6B6005A77AB /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117523C02C9BA6B6005A77AB /* domain.framework */; };
+		117523C22C9BA6B6005A77AB /* domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 117523C02C9BA6B6005A77AB /* domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		117523CA2C9BA6D5005A77AB /* api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117523C92C9BA6D5005A77AB /* api.framework */; };
+		117523CB2C9BA6D5005A77AB /* api.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 117523C92C9BA6D5005A77AB /* api.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		117523D62C9BA9A7005A77AB /* core_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117523D52C9BA9A7005A77AB /* core_ios.framework */; };
+		117523D72C9BA9A7005A77AB /* core_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 117523D52C9BA9A7005A77AB /* core_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		117523DF2C9BA9F5005A77AB /* test_resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117523DE2C9BA9F5005A77AB /* test_resources.framework */; };
+		117523E02C9BA9F5005A77AB /* test_resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 117523DE2C9BA9F5005A77AB /* test_resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		118941C72C0D201B005DA10E /* StoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941C62C0D201B005DA10E /* StoresScreen.swift */; };
 		118941C92C0D205A005DA10E /* StoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941C82C0D205A005DA10E /* StoresViewModel.swift */; };
-		118941D42C0D435E005DA10E /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941D32C0D435E005DA10E /* common.framework */; };
-		118941D52C0D435E005DA10E /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118941D32C0D435E005DA10E /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		118942B22C0DA176005DA10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118942B12C0DA176005DA10E /* Assets.xcassets */; };
 		118942B52C0DA1D3005DA10E /* AssetsFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118942B42C0DA1D3005DA10E /* AssetsFramework.swift */; };
 		118942B72C0DA21A005DA10E /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118942B62C0DA21A005DA10E /* LocationView.swift */; };
@@ -46,13 +44,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				11250ECE2C12B9FC009DDAC3 /* checkout.framework in Embed Frameworks */,
 				118942D62C0DA377005DA10E /* ui_dandelion.framework in Embed Frameworks */,
+				117523C22C9BA6B6005A77AB /* domain.framework in Embed Frameworks */,
 				116A448D2C8D68BE008E442F /* persistence.framework in Embed Frameworks */,
-				118941C12C0D1F84005DA10E /* stores.framework in Embed Frameworks */,
-				116A445F2C8D0AC6008E442F /* routing.framework in Embed Frameworks */,
-				118941D52C0D435E005DA10E /* common.framework in Embed Frameworks */,
-				116A44902C8D6A43008E442F /* user.framework in Embed Frameworks */,
+				117523D72C9BA9A7005A77AB /* core_ios.framework in Embed Frameworks */,
+				117523E02C9BA9F5005A77AB /* test_resources.framework in Embed Frameworks */,
+				117523CB2C9BA6D5005A77AB /* api.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +69,10 @@
 		116A445D2C8D0AC6008E442F /* routing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = routing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		116A448B2C8D68BE008E442F /* persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		116A448E2C8D6A43008E442F /* user.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = user.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		117523C02C9BA6B6005A77AB /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		117523C92C9BA6D5005A77AB /* api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		117523D52C9BA9A7005A77AB /* core_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = core_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		117523DE2C9BA9F5005A77AB /* test_resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = test_resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		118941BF2C0D1F84005DA10E /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		118941C62C0D201B005DA10E /* StoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresScreen.swift; sourceTree = "<group>"; };
 		118941C82C0D205A005DA10E /* StoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewModel.swift; sourceTree = "<group>"; };
@@ -92,13 +93,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11250ECD2C12B9FC009DDAC3 /* checkout.framework in Frameworks */,
 				118942D52C0DA377005DA10E /* ui_dandelion.framework in Frameworks */,
+				117523C12C9BA6B6005A77AB /* domain.framework in Frameworks */,
 				116A448C2C8D68BE008E442F /* persistence.framework in Frameworks */,
-				118941C02C0D1F84005DA10E /* stores.framework in Frameworks */,
-				116A445E2C8D0AC6008E442F /* routing.framework in Frameworks */,
-				118941D42C0D435E005DA10E /* common.framework in Frameworks */,
-				116A448F2C8D6A43008E442F /* user.framework in Frameworks */,
+				117523D62C9BA9A7005A77AB /* core_ios.framework in Frameworks */,
+				117523DF2C9BA9F5005A77AB /* test_resources.framework in Frameworks */,
+				117523CA2C9BA6D5005A77AB /* api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +138,10 @@
 		118941BE2C0D1F84005DA10E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				117523DE2C9BA9F5005A77AB /* test_resources.framework */,
+				117523D52C9BA9A7005A77AB /* core_ios.framework */,
+				117523C92C9BA6D5005A77AB /* api.framework */,
+				117523C02C9BA6B6005A77AB /* domain.framework */,
 				116A448E2C8D6A43008E442F /* user.framework */,
 				116A448B2C8D68BE008E442F /* persistence.framework */,
 				116A445D2C8D0AC6008E442F /* routing.framework */,

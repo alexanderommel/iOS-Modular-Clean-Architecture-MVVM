@@ -8,19 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		11490B642C0CF04F00888A39 /* networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490B632C0CF04F00888A39 /* networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		118941CE2C0D2213005DA10E /* stores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118941CD2C0D2213005DA10E /* stores.framework */; };
-		118941CF2C0D2213005DA10E /* stores.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118941CD2C0D2213005DA10E /* stores.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1175232B2C9B9E29005A77AB /* api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1175232A2C9B9E29005A77AB /* api.framework */; };
+		1175232C2C9B9E29005A77AB /* api.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1175232A2C9B9E29005A77AB /* api.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		117523A62C9BA5C2005A77AB /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117523A52C9BA5C2005A77AB /* domain.framework */; };
+		117523A72C9BA5C2005A77AB /* domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 117523A52C9BA5C2005A77AB /* domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		118941D22C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118941D12C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		118941D02C0D2213005DA10E /* Embed Frameworks */ = {
+		1175232D2C9B9E29005A77AB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				118941CF2C0D2213005DA10E /* stores.framework in Embed Frameworks */,
+				117523A72C9BA5C2005A77AB /* domain.framework in Embed Frameworks */,
+				1175232C2C9B9E29005A77AB /* api.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,6 +33,8 @@
 /* Begin PBXFileReference section */
 		11490B602C0CF04F00888A39 /* networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B632C0CF04F00888A39 /* networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = networking.h; sourceTree = "<group>"; };
+		1175232A2C9B9E29005A77AB /* api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		117523A52C9BA5C2005A77AB /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		118941CD2C0D2213005DA10E /* stores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = stores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		118941D12C0D2228005DA10E /* StoreRemoteRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRemoteRepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,7 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118941CE2C0D2213005DA10E /* stores.framework in Frameworks */,
+				117523A62C9BA5C2005A77AB /* domain.framework in Frameworks */,
+				1175232B2C9B9E29005A77AB /* api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,8 @@
 		118941CC2C0D2213005DA10E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				117523A52C9BA5C2005A77AB /* domain.framework */,
+				1175232A2C9B9E29005A77AB /* api.framework */,
 				118941CD2C0D2213005DA10E /* stores.framework */,
 			);
 			name = Frameworks;
@@ -110,7 +118,7 @@
 				11490B5C2C0CF04F00888A39 /* Sources */,
 				11490B5D2C0CF04F00888A39 /* Frameworks */,
 				11490B5E2C0CF04F00888A39 /* Resources */,
-				118941D02C0D2213005DA10E /* Embed Frameworks */,
+				1175232D2C9B9E29005A77AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

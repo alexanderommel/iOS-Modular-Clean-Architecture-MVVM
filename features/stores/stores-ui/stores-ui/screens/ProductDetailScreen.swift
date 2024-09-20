@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-import stores
+import core_ios
 import ui_dandelion
-import checkout
-import routing
-import user
+import domain
 import persistence
+import test_resources
+import api
 
 public struct ProductDetailScreen: View {
     
@@ -134,12 +134,14 @@ public struct ProductDetailScreen: View {
 
 #Preview {
     
-    let context = AppDatabase.preview.container.newBackgroundContext()
-
+    @Previewable @StateObject var storesViewModel = StoresViewModel(api: StoresApiInteractorFaker(), checkout_api: CheckoutApiInteractorFaker())
     
-    @StateObject var router = NavigationRouter()
+    @Previewable @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiInteractorFaker())
     
-    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: context)))
+    
+    @Previewable @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorFaker())
+    
+    @Previewable @StateObject var router = NavigationRouter()
     
     
     

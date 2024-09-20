@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import user
-import common
-import stores
+import api
+import domain
 
 class AddLineItemUseCase{
     
@@ -40,9 +39,9 @@ class AddLineItemUseCase{
         
         let user = await userApi.getAuthenticatedUser()
         
-        let checkouts = await localRepo.getAllCheckoutsByUserId(userId: user.id)
+        let checkouts =  localRepo.getAll(userId: user.id)
         
-        print("AddLiteItemUseCase: There's \(checkouts.count) checkouts on the database for user \(user.id)")
+        print("AddLiteItemUseCase: There's \(String(describing: checkouts.count)) checkouts on the database for user \(user.id)")
         
         let storeRes = await storesApi.getStoreById(id: storeId)
         let productRes = await storesApi.getProductById(id: lineItem.productId)
@@ -65,14 +64,16 @@ class AddLineItemUseCase{
         }
     
         
-        var checkout: CheckoutDto?=nil
+        var checkout: Checkout?=nil
         // check if already exists
         var exists = false
+        print("Checking if there's a checkout for store \(storeId)")
         for c in checkouts{
-            if c.storeId == storeId{
+            print("Found a checkout with userid '\(c.userId)' and storeId '\(c.store.id)'")
+            if c.store.id == storeId{
                 exists = true
                 checkout = c
-                checkout?.shoppingCart.items.append(lineItem)
+                checkout!.shoppingCart.items.append(LineItem(id: "", product: product!, quantity: lineItem.quantity))
                 break
             }
         }
@@ -81,16 +82,18 @@ class AddLineItemUseCase{
             
             print("AddLiteItemUseCase: Creating a new checkout")
             
-            checkout = CheckoutDto(id: "", storeId: storeId, paymentMethod: .CASH, note: nil, shoppingCart: ShoppingCartDto(storeId: storeId, items: [LineItemDto(productId: lineItem.productId, quantity: lineItem.quantity)]), requestUtensils: false, lastTotalValue: "", userId: user.id)
+            let shoppingCart = ShoppingCart(items: [LineItem(id: "", product: product!, quantity: lineItem.quantity)])
             
-            let res = await localRepo.insertCheckout(c: checkout!, userId: user.id)
+            checkout = Checkout(id: "", shoppingCart: shoppingCart, store: store!, requestUtensils: false, deliveryLocation: deliveryloc, paymenthMetod: PaymentMethod.CASH, userId: user.id)
+            
+            _ =  localRepo.insertCheckout(checkout!, userId: user.id)
             
 
         }else{
             
             print("AddLiteItemUseCase: Updating the checkout")
             
-            let res = await localRepo.updateCheckout(c: checkout!, userId: user.id)
+            _ = localRepo.updateCheckout(checkout!, userId: user.id)
         }
         
         print("AddLiteItemUseCase: Success")

@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import stores
+import test_resources
+import domain
 
 struct StoreView: View {
     

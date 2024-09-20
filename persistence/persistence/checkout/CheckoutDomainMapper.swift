@@ -6,17 +6,19 @@
 //
 
 import Foundation
-import checkout
+import api
+import domain
 import CoreData
-import common
+
+/**
 
 public class CheckoutDomainMapper{
     public init(){
-        
+         let a = 22
     }
     
     
-    public func mapToDomainModel(entity: Checkout) -> checkout.CheckoutDto{
+    public func mapToDomainModel(entity: Checkout) -> api.CheckoutDto{
         
         var paymentMethod = PaymentMethod.CASH
         
@@ -52,7 +54,7 @@ public class CheckoutDomainMapper{
         
     }
     
-    public func mapLineItemToEntity(domain: checkout.LineItemDto, entity: LineItem?, context: NSManagedObjectContext) -> LineItem{
+    public func mapLineItemToEntity(domain: api.LineItemDto, entity: LineItem?, context: NSManagedObjectContext) -> LineItem{
         
         var item = LineItem(context: context)
         if let itt = entity {
@@ -64,7 +66,7 @@ public class CheckoutDomainMapper{
         
     }
     
-    public func mapToEntityModel(domain: checkout.CheckoutDto, entity: Checkout?, context: NSManagedObjectContext) -> Checkout{
+    public func mapToEntityModel(domain: api.CheckoutDto, entity: Checkout?, context: NSManagedObjectContext) -> Checkout{
         
         
         var checkout: Checkout
@@ -138,3 +140,6 @@ public class CheckoutDomainMapper{
     }
     
 }
+
+
+**/

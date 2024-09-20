@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-import stores
-import checkout
-import routing
+import domain
+import core_ios
+import test_resources
 
 public struct ShoppingCartScreen: View {
     
@@ -111,7 +111,7 @@ public struct ShoppingCartScreen: View {
 }
 
 #Preview {
-    @StateObject var router = NavigationRouter()
+    @Previewable @StateObject var router = NavigationRouter()
     return ShoppingCartScreen(cart: checkout1)
         .environmentObject(router)
 }

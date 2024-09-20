@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import checkout
+import domain
+import test_resources
 
 struct LineItemView: View {
     

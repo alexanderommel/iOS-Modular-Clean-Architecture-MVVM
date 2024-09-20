@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import stores
-import common
+import domain
+import test_resources
 
 struct CatalogueProductCategoryView: View {
     

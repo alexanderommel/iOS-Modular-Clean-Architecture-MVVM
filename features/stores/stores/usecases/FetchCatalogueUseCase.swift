@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import common
+import api
+import domain
 
 
 class FetchCatalogueUseCase{

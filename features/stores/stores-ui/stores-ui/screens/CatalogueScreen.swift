@@ -6,12 +6,11 @@
 //
 
 import SwiftUI
-import stores
+import core_ios
 import ui_dandelion
-import checkout
+import domain
 import persistence
-import routing
-import user
+import test_resources
 
 public struct CatalogueScreen: View {
     
@@ -185,20 +184,14 @@ public struct CatalogueScreen: View {
 
 #Preview {
     
-    let context = AppDatabase.preview.container.newBackgroundContext()
-
+    @Previewable @StateObject var storesViewModel = StoresViewModel(api: StoresApiInteractorFaker(), checkout_api: CheckoutApiInteractorFaker())
     
-    @StateObject var storesViewModel = StoresViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()),
-                                        checkout_api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: AppDatabase.preview.container.newBackgroundContext()))
-    )
-    
-    @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()))
+    @Previewable @StateObject var catalogueViewModel = CatalogueViewModel(api: StoresApiInteractorFaker())
     
     
+    @Previewable @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorFaker())
     
-    @StateObject var productViewModel = ProductViewModel(api: CheckoutApiInteractorImpl(storeApi: StoresApiImpl(store_remote_repo: StoreRemoteRepositoryFaker(), user_api_interactor: UserApiInteractorFaker()), userApi: UserApiInteractorFaker(), checkoutLocalRepo: CheckoutLocalRepositoryImpl(context: context)))
-    
-    @StateObject var router = NavigationRouter()
+    @Previewable @StateObject var router = NavigationRouter()
     
     return CatalogueScreen(store: stors[0], catalogue: catalog)
         .environmentObject(catalogueViewModel)

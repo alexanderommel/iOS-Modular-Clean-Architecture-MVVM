@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import common
-import user
+import api
+import domain
 
 class FetchStoresUseCase{
     

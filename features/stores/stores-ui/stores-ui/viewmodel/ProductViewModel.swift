@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import stores
-import checkout
-import common
+import api
+import domain
 import Combine
 
 public class ProductViewModel: ObservableObject{

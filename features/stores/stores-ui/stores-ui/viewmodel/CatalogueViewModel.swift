@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import stores
-import common
+import api
+import domain
 import Combine
 
 public class CatalogueViewModel: ObservableObject{

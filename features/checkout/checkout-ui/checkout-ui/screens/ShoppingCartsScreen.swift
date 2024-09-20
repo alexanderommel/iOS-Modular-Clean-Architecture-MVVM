@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-import checkout
-import routing
+import domain
+import core_ios
+import test_resources
 
 
 public struct ShoppingCartsScreen: View {
@@ -68,10 +69,10 @@ public struct ShoppingCartsScreen: View {
             
             ForEach(carts){ checkout in
                 Button{
-                    router.navigate(to: .shoppingCartScreen(cart: checkout))
+                    router.navigate(to: .shoppingCartScreen(checkout: checkout))
                 }label: {
-                    ShoppingCartView(cart: checkout.shoppingCart)
-                        .padding(.top, 10)
+                    ShoppingCartView(checkout: checkout)
+                        .padding(.top, 5)
                 }
             }.listRowSeparator(.hidden)
         }
@@ -95,7 +96,7 @@ public struct ShoppingCartsScreen: View {
 }
 
 #Preview {
-    @StateObject var router = NavigationRouter()
+    @Previewable @StateObject var router = NavigationRouter()
     return ShoppingCartsScreen(carts: checkouts_data)
         .environmentObject(router)
 }

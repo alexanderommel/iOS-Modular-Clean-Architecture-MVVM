@@ -8,14 +8,13 @@
 import SwiftUI
 import stores_ui
 import networking
-import common
 import stores
-import user
 import persistence
-
-import routing
-
+import api
+import domain
 import checkout
+import core_ios
+import test_resources
 
 struct ContentView: View {
     
@@ -33,7 +32,7 @@ struct ContentView: View {
 
 #Preview {
     
-    @StateObject var router = NavigationRouter()
+    @Previewable @StateObject var router = NavigationRouter()
     
     let context = AppDatabase.preview.container.newBackgroundContext()
     

@@ -6,12 +6,10 @@
 //
 
 import Foundation
-import user
-import common
-import stores
 import CoreData
-import checkout
-
+import api
+import domain
+import test_resources
 
 public struct AppDatabase {
     
@@ -24,7 +22,15 @@ public struct AppDatabase {
         
         let defaultUser = test_user
         
+        let checkout = Checkout(id: "", shoppingCart: ShoppingCart(items: []), store: stors[0], requestUtensils: false, deliveryLocation: stors[0].location, paymenthMetod: PaymentMethod.CASH, userId: test_user.id)
         
+        let entity = CheckoutEntity(context: viewContext)
+        entity.update(from: checkout)
+        do {
+            try viewContext.save()
+        } catch {
+            print("error when saving checkout in preview db")
+        }
         
         return result
     }()

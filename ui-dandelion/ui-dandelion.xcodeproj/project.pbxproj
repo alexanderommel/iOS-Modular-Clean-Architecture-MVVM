@@ -12,6 +12,7 @@
 		11250EC32C12B3AB009DDAC3 /* ToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11250EC22C12B3AB009DDAC3 /* ToastStyle.swift */; };
 		11250EC52C12B3D9009DDAC3 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11250EC42C12B3D9009DDAC3 /* ToastView.swift */; };
 		11250EC72C12B408009DDAC3 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11250EC62C12B408009DDAC3 /* ToastModifier.swift */; };
+		117524422C9D1BBC005A77AB /* GrayCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117524412C9D1BB3005A77AB /* GrayCircularProgressView.swift */; };
 		118942C62C0DA2A4005DA10E /* ui_dandelion.h in Headers */ = {isa = PBXBuildFile; fileRef = 118942C52C0DA2A4005DA10E /* ui_dandelion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		118942CD2C0DA2DE005DA10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118942CC2C0DA2DE005DA10E /* Assets.xcassets */; };
 		118942D02C0DA339005DA10E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118942CF2C0DA339005DA10E /* BundleExtension.swift */; };
@@ -25,6 +26,7 @@
 		11250EC22C12B3AB009DDAC3 /* ToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyle.swift; sourceTree = "<group>"; };
 		11250EC42C12B3D9009DDAC3 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		11250EC62C12B408009DDAC3 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		117524412C9D1BB3005A77AB /* GrayCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayCircularProgressView.swift; sourceTree = "<group>"; };
 		118942C22C0DA2A4005DA10E /* ui_dandelion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ui_dandelion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		118942C52C0DA2A4005DA10E /* ui_dandelion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_dandelion.h; sourceTree = "<group>"; };
 		118942CC2C0DA2DE005DA10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		11B8CF4D2C11FBF6004F4879 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				117524412C9D1BB3005A77AB /* GrayCircularProgressView.swift */,
 				11B8CF4E2C11FC13004F4879 /* ScreenLoadingView.swift */,
 				11250EBD2C12AB80009DDAC3 /* CircularProgressView.swift */,
 				11250EC42C12B3D9009DDAC3 /* ToastView.swift */,
@@ -185,6 +188,7 @@
 				11250EC72C12B408009DDAC3 /* ToastModifier.swift in Sources */,
 				118942D02C0DA339005DA10E /* BundleExtension.swift in Sources */,
 				11250EC52C12B3D9009DDAC3 /* ToastView.swift in Sources */,
+				117524422C9D1BBC005A77AB /* GrayCircularProgressView.swift in Sources */,
 				11250EC32C12B3AB009DDAC3 /* ToastStyle.swift in Sources */,
 				118942D82C0DA3A9005DA10E /* ColorExtension.swift in Sources */,
 				11250EC12C12B377009DDAC3 /* Toast.swift in Sources */,

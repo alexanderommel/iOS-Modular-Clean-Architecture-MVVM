@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import common
-import stores
+import api
+import domain
 
 public class StoreRemoteRepositoryImpl{
 

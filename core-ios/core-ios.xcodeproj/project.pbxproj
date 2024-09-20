@@ -9,12 +9,35 @@
 /* Begin PBXBuildFile section */
 		114798712C5556A00091018E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114798702C55569F0091018E /* MapView.swift */; };
 		11490B8E2C0CF0A700888A39 /* core_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 11490B8D2C0CF0A700888A39 /* core_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		117523AA2C9BA5CE005A77AB /* api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117523A92C9BA5CE005A77AB /* api.framework */; };
+		117523AB2C9BA5CE005A77AB /* api.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 117523A92C9BA5CE005A77AB /* api.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		117523D12C9BA933005A77AB /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117523D02C9BA930005A77AB /* NavigationRouter.swift */; };
+		117523D32C9BA94F005A77AB /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117523D22C9BA94F005A77AB /* domain.framework */; };
+		117523D42C9BA94F005A77AB /* domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 117523D22C9BA94F005A77AB /* domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		117523AC2C9BA5CE005A77AB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				117523D42C9BA94F005A77AB /* domain.framework in Embed Frameworks */,
+				117523AB2C9BA5CE005A77AB /* api.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		114798702C55569F0091018E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		11490B8A2C0CF0A700888A39 /* core_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = core_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11490B8D2C0CF0A700888A39 /* core_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core_ios.h; sourceTree = "<group>"; };
+		117523A92C9BA5CE005A77AB /* api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		117523D02C9BA930005A77AB /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		117523D22C9BA94F005A77AB /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117523D32C9BA94F005A77AB /* domain.framework in Frameworks */,
+				117523AA2C9BA5CE005A77AB /* api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				11490B8C2C0CF0A700888A39 /* core-ios */,
+				117523A82C9BA5CE005A77AB /* Frameworks */,
 				11490B8B2C0CF0A700888A39 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,10 +81,28 @@
 		11490B8C2C0CF0A700888A39 /* core-ios */ = {
 			isa = PBXGroup;
 			children = (
+				117523CF2C9BA92A005A77AB /* router */,
 				1147986F2C5556820091018E /* views */,
 				11490B8D2C0CF0A700888A39 /* core_ios.h */,
 			);
 			path = "core-ios";
+			sourceTree = "<group>";
+		};
+		117523A82C9BA5CE005A77AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				117523D22C9BA94F005A77AB /* domain.framework */,
+				117523A92C9BA5CE005A77AB /* api.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		117523CF2C9BA92A005A77AB /* router */ = {
+			isa = PBXGroup;
+			children = (
+				117523D02C9BA930005A77AB /* NavigationRouter.swift */,
+			);
+			path = router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +127,7 @@
 				11490B862C0CF0A700888A39 /* Sources */,
 				11490B872C0CF0A700888A39 /* Frameworks */,
 				11490B882C0CF0A700888A39 /* Resources */,
+				117523AC2C9BA5CE005A77AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117523D12C9BA933005A77AB /* NavigationRouter.swift in Sources */,
 				114798712C5556A00091018E /* MapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

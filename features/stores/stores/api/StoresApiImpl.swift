@@ -6,13 +6,10 @@
 //
 
 import Foundation
-import common
-import user
+import domain
+import api
 
 public class StoresApiImpl: StoresApiInteractor{
-    
-    
-    
     
     
     let fetch_uc:FetchStoresUseCase
@@ -35,11 +32,11 @@ public class StoresApiImpl: StoresApiInteractor{
         return await fetch_catalogue_uc.invoke(storeId: store.id)
     }
     
-    public func getStoreById(id: Int) async -> common.UseCaseResponse<Store> {
+    public func getStoreById(id: Int) async -> UseCaseResponse<Store> {
         return await fetch_store_uc.invoke(id: id)
     }
     
-    public func getProductById(id: Int) async -> common.UseCaseResponse<Product> {
+    public func getProductById(id: Int) async -> UseCaseResponse<Product> {
         return await fetch_product_uc.invoke(id: id)
     }
     

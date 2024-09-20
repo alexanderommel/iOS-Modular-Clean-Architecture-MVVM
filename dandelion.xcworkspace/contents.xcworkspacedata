@@ -8,7 +8,13 @@
       location = "group:features/orders/orders.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:routing/routing.xcodeproj">
+      location = "group:test-resources/test-resources.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:domain/domain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:api/api.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:features/checkout/checkout-ui/checkout-ui.xcodeproj">
@@ -23,16 +29,10 @@
       location = "group:dandelion/dandelion.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:features/user/user.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:features/checkout/checkout.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:features/stores/stores.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:common/common.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:core-ios/core-ios.xcodeproj">

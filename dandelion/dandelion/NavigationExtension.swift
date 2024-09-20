@@ -6,15 +6,14 @@
 //
 
 import Foundation
-import user
 import SwiftUI
 import CoreData
 import Combine
-import stores
-import checkout
 import stores_ui
-import routing
 import checkout_ui
+import api
+import core_ios
+import domain
 
 public struct DestiNav: ViewModifier{
     public func body(content: Content) -> some View {
@@ -31,8 +30,8 @@ public struct DestiNav: ViewModifier{
                 ProductDetailScreen(product: product, store: store)
             case .shoppingCartsScreen(let carts):
                 ShoppingCartsScreen(carts: carts)
-            case .shoppingCartScreen(let cart):
-                ShoppingCartScreen(cart: cart)
+            case .shoppingCartScreen(let checkout):
+                ShoppingCartScreen(cart: checkout)
             case .checkoutScreen(let checkout):
                 CheckoutScreen(c: checkout)
                 

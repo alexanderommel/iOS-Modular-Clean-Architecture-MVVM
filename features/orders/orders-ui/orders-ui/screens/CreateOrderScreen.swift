@@ -6,23 +6,19 @@
 //
 
 import SwiftUI
-import persistence
-import networking
-import CoreData
-import checkout
-import user
-import common
-import routing
 import ui_dandelion
+import api
+import test_resources
+import domain
 
 public struct CreateOrderScreen: View {
     
-    private let checkout: checkout.Checkout
+    private let checkout: Checkout
     @State private var isRotating = 0.0
     @State var progress: Double = 0
     let timer = Timer.publish(every: 0.15, on: .main, in: .common).autoconnect()
     
-    public init(checkout: checkout.Checkout) {
+    public init(checkout: Checkout) {
         self.checkout = checkout
     }
     

@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import checkout
 import MapKit
-import routing
+import domain
 import core_ios
+import test_resources
 
 public struct CheckoutScreen: View {
     

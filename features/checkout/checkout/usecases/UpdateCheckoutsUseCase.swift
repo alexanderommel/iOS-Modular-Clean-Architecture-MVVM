@@ -6,9 +6,10 @@
 //
 
 import Foundation
-import user
-import common
-import stores
+import api
+import domain
+
+/**
 
 class UpdateCheckoutsUseCase{
     
@@ -53,7 +54,7 @@ class UpdateCheckoutsUseCase{
             
             var domain_items: [LineItem] = []
             
-            for l in c.shoppingCart.items{
+            for l in c.shoppingCart.items{ 
                 
                 let productRes = await storesApi.getProductById(id: l.productId)
                 var product: Product?=nil
@@ -85,3 +86,6 @@ class UpdateCheckoutsUseCase{
     }
     
 }
+
+
+**/
